@@ -5,12 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/startpage.unity
     guid: 57f9224c035a05f45aac4b5611d94120
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 5d8405a1bb247fc40be20a460dca75b8
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 6621177ccf2ae584dadd7c6e9f8b6605, type: 2}
+    UnityEditor.XR.VisionOS.VisionOSSettings: {fileID: 11400000, guid: 1a9523cfea2cdd145a04c9a3c9ca8e28, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.polyspatial.xr.xr_settings: {fileID: 11400000, guid: 85c1769ae217e7f4cac13992376dcf1e, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 0cc112a4304d436429a8db8273ae77d4, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c09eb0de429778046b8b5d52e57a83fa, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: afbd3f1a0ff4b3b4c8a89d9c3011530a, type: 2}
   m_UseUCBPForAssetBundles: 0
