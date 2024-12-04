@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 76296b567362f34458915f7f26c7b861
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 220842
+  packageName: 360 Supermarket
+  packageVersion: 1.0
+  assetPath: Assets/SuperMarket/Prefabs/Pref_CashCounter_Sm.prefab
+  uploadId: 496295

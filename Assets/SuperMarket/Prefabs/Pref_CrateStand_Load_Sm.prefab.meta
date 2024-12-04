@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 56b2cf03f360f0f498da30f9f9b95258
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 220842
+  packageName: 360 Supermarket
+  packageVersion: 1.0
+  assetPath: Assets/SuperMarket/Prefabs/Pref_CrateStand_Load_Sm.prefab
+  uploadId: 496295

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 60cd5215ae2be764e82b66e2e77b5dc4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 220842
+  packageName: 360 Supermarket
+  packageVersion: 1.0
+  assetPath: Assets/SuperMarket/Materials/DisplayBoard_Mat_01.mat
+  uploadId: 496295
