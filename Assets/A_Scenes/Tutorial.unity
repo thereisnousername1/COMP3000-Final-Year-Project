@@ -38777,10 +38777,6 @@ PrefabInstance:
       value: Pref_CrateStand01_Sm
       objectReference: {fileID: 0}
     - target: {fileID: 4269781620579555203, guid: b91930e356b912e4dbf98a0ee09f7d33, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4269781620579555203, guid: b91930e356b912e4dbf98a0ee09f7d33, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
       objectReference: {fileID: 0}
