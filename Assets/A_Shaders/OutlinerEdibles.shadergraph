@@ -8,9 +8,6 @@
         },
         {
             "m_Id": "26956454f72b42169b49ece9bd49e1d8"
-        },
-        {
-            "m_Id": "295a56f89ed04d759d66537eaa6ba620"
         }
     ],
     "m_Keywords": [],
@@ -286,34 +283,6 @@
 }
 
 {
-    "m_SGVersion": 1,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector3ShaderProperty",
-    "m_ObjectId": "295a56f89ed04d759d66537eaa6ba620",
-    "m_Guid": {
-        "m_GuidSerialized": "6209af23-771e-4dfa-bb44-330feb01098a"
-    },
-    "m_Name": "Vector3",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Vector3",
-    "m_DefaultReferenceName": "_Vector3",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    }
-}
-
-{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.MultiplyNode",
     "m_ObjectId": "3e07506296f64871a44c7ca62c37fb08",
@@ -579,9 +548,6 @@
         },
         {
             "m_Id": "26956454f72b42169b49ece9bd49e1d8"
-        },
-        {
-            "m_Id": "295a56f89ed04d759d66537eaa6ba620"
         }
     ]
 }
