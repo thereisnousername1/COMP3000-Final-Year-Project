@@ -57655,6 +57655,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HoomanDefault
       objectReference: {fileID: 0}
+    - target: {fileID: 8997054983820235835, guid: 51e950719fc93cb46afcfdc04137e6d0, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
