@@ -2,6 +2,9 @@ using UnityEngine.InputSystem;
 using UnityEngine;
 using Unity.VisualScripting;
 
+/// <summary>
+///  This script is applied for XR Origin to perform a simple VR pause menu, NOT HAND MENU
+/// </summary>
 public class GameMenuManager : MonoBehaviour
 {
     public Transform head;

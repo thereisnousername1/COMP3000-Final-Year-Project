@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// This script is applied for the hands models, to simulate real hand motion
+/// </summary>
 public class HandAnimator : MonoBehaviour
 {
     public InputActionProperty pinchInput;
