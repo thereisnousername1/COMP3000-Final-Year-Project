@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Hooman
+  - Floor
   layers:
   - Default
   - TransparentFX

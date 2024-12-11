@@ -12,6 +12,8 @@ public class HoomanBehavior : MonoBehaviour
     private Rigidbody rb; // Rigidbody for physics
     private float currentSpeed = 0f;
 
+    private bool isKnockedBack = false; // Is object getting hit?
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -28,8 +30,12 @@ public class HoomanBehavior : MonoBehaviour
 
     void FixedUpdate()
     {
+        // without this line the hitting logic doesn't work
+        if (isKnockedBack) return; // ignore original behaviour if it is already hitted
+
         if (player == null) return;
 
+#region Head spinning logic
         // Spin their head towards player
         Vector3 directionToPlayer = player.position - head.position;
         Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
@@ -52,8 +58,10 @@ public class HoomanBehavior : MonoBehaviour
         {
             // Move the head forward from -0.25f to -0.15f
             float targetZ = -0.15f;
+            // Move the head forward from -0.15f to -0.05f
             if (headTiltX > 20f)
                 targetZ = -0.05f;
+            // Move the head forward from -0.05f to 0.05f
             if (headTiltX > 35f)
                 targetZ = 0.05f;
 
@@ -73,10 +81,29 @@ public class HoomanBehavior : MonoBehaviour
                     Time.deltaTime * rotateSpeed);
         }
         head.rotation = Quaternion.Slerp(head.rotation, targetRotation, Time.deltaTime * rotateSpeed);
+#endregion
 
         // Movement logic
         Vector3 moveDirection = (player.position - transform.position).normalized;
         currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, acceleration * Time.deltaTime);
         rb.linearVelocity = moveDirection * currentSpeed;
+    }
+
+    public void GetHit(Vector3 hitDirection, float hitForce)
+    {
+        if (isKnockedBack) return; // ignore original behaviour if it is already hitted
+
+        isKnockedBack = true;
+
+        rb.linearVelocity = hitDirection.normalized * hitForce;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (isKnockedBack && collision.gameObject.CompareTag("Floor"))
+        {
+            // return to normal
+            isKnockedBack = false;
+            rb.linearVelocity = Vector3.zero;
+        }
     }
 }
