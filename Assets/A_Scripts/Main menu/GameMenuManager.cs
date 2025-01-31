@@ -25,6 +25,8 @@ public class GameMenuManager : MonoBehaviour
 
     void Update()
     {
+
+#region Pause Menu behaviour
         // do only once (if an action was perform in a specific frame)
         if (showMenuButton.action.WasPerformedThisFrame())
         {
@@ -53,13 +55,12 @@ public class GameMenuManager : MonoBehaviour
             menu.transform.LookAt(new Vector3(head.position.x, menu.transform.position.y, head.position.z));
             menu.transform.forward *= -1;
         }
+#endregion
 
-        /*
         if (showUIButton.action.WasPerformedThisFrame())
         {
             UI.SetActive(!UI.activeSelf);
         }
-        */
 
         // Project hand forward vector onto the horizontal plane
         Vector3 horizontalForward = Vector3.ProjectOnPlane(RightHand.forward, Vector3.up).normalized;

@@ -4,7 +4,53 @@ using UnityEngine.UI;
 
 public class Scoring : MonoBehaviour
 {
-    public TextMeshProUGUI Value1, Value2, Value3, Value4, Value5;
+    /// <summary>
+    /// Level design
+    /// 
+    /// Thinking of the future development, I have these ideas pop up in my mind
+    /// 
+    /// 1. Endings
+    /// 
+    ///     Not collecting enough healthy food / collecting too much unhealthy food = bad ending(s)
+    ///     Collecting enough healthy food every level -> somehow the player find a seemingly possible way to escape? -> normal ending (We don't know their fate)
+    ///     Collect all mysterious parts -> build a spaceship by that? -> good ending (Actually escaped)
+    ///     
+    /// 2. Awards
+    /// 
+    ///     Whether the player can or can not proceed to the next level depends on grades, grades depends on score?
+    ///     
+    ///     New mode unlock after beating the game once (playability)
+    ///         Zombie fighting mode(endless)
+    ///         (maybe) map editor mode?
+    ///         (maybe) selectable levels?
+    ///         
+    ///     Some other awards? (game art style changing?)
+    ///     
+    /// 3. Timer
+    /// 
+    ///     When a timer runs out of time, it doesn't end the level immediately
+    ///     But spawning countless hoomans
+    ///     Makes it impossible to escape
+    ///     
+    /// 4. Hooman
+    /// 
+    ///     Defeat them rewards bonus score
+    ///     More realistic moving speed based on distance to player?
+    ///     Navigation mesh?
+    ///     
+    /// 5. Level design
+    /// 
+    ///     Randomly generate items on the shelf?
+    ///     Using cutscene to tell story?
+    ///     Using only words to tell story?
+    ///     
+    /// 6. Instructions
+    /// 
+    /// 7. Ranking?
+    /// 
+    /// </summary>
+
+    public TextMeshProUGUI Value1, Value2, Value3, Value4, Value5, Sum;
     public static float TotalScore;
 
     public float VeggieScore = 0, CarbonScore = 0, ProteinScore = 0, FatScore = 0, WaterScore = 0;
@@ -37,15 +83,4 @@ public class Scoring : MonoBehaviour
         TotalScore += sum;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

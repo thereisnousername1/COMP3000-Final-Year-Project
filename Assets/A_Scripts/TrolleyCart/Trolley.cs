@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class Trolley : MonoBehaviour
 {
     public FoodManager foodManager;
-    public Collider temp;
     Attributes foodItem;
 
     private void OnTriggerEnter(Collider other)

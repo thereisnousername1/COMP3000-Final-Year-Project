@@ -19,7 +19,7 @@ public class HoomanBehavior : MonoBehaviour
     private Rigidbody rb; // Rigidbody for physics
     private float currentSpeed = 0f;
 
-    private bool isKnockedBack = false; // Is object getting hit?
+    public bool isKnockedBack = false; // Is object getting hit?
 
     void Start()
     {
@@ -105,7 +105,7 @@ public class HoomanBehavior : MonoBehaviour
 
         rb.linearVelocity = hitDirection.normalized * hitForce;
     }
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         /*
         if (isKnockedBack && collision.gameObject.CompareTag("Floor"))
