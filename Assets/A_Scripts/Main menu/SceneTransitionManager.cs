@@ -1,4 +1,3 @@
-using Meta.XR.MRUtilityKit;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,8 +5,6 @@ using UnityEngine.SceneManagement;
 public class SceneTransitionManager : MonoBehaviour
 {
     public FadeScreen fadeScreen;
-    public GameObject spawnPoint;
-    private GameObject player;
 
     [SerializeField]
     private string targetScene;
@@ -24,10 +21,6 @@ public class SceneTransitionManager : MonoBehaviour
 
     private IEnumerator StartSceneRoutine()
     {
-        player = GameObject.FindWithTag("Player");
-        player.transform.position = spawnPoint.transform.position;
-        player.transform.rotation = spawnPoint.transform.rotation;
-        
         fadeScreen.gameObject.SetActive(true);
         fadeScreen.FadeIn();
         yield return new WaitForSeconds(fadeScreen.fadeDuration);
@@ -61,5 +54,4 @@ public class SceneTransitionManager : MonoBehaviour
     {
         Time.timeScale = 1;
     }
-
 }
