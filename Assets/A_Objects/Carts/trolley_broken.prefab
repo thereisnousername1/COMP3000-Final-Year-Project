@@ -403,7 +403,6 @@ GameObject:
   - component: {fileID: 7563614288968820709}
   - component: {fileID: 7656114659567182079}
   - component: {fileID: 4743467052312037622}
-  - component: {fileID: 4626770860324224325}
   m_Layer: 2
   m_Name: CartUI
   m_TagString: Untagged
@@ -529,27 +528,6 @@ MonoBehaviour:
   proteinSlider: {fileID: 2110899704116415598}
   carbonSlider: {fileID: 6678149894463556389}
   fatSlider: {fileID: 2530899601997636447}
---- !u!65 &4626770860324224325
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3398400432140646030}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 800.138, y: 596.99164, z: 133.07143}
-  m_Center: {x: 0.18900631, y: 1.6185192, z: 0.000000020728166}
 --- !u!1 &4512820337750237298
 GameObject:
   m_ObjectHideFlags: 0

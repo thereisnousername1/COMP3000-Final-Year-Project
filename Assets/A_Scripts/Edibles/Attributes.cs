@@ -22,6 +22,5 @@ public enum FoodType
     Veggie,
     Protein,
     Carbohydrate,
-    Fat,
-    Water
+    Fat
 }

@@ -1,20 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// to be mapped to anything, usually I mapped it to the CartUI
 public class FoodManager : MonoBehaviour
 {
     public Slider veggieSlider;
     public Slider proteinSlider;
     public Slider carbonSlider;
     public Slider fatSlider;
-    public Slider waterSlider;
 
     private float veggieAmount;
     private float proteinAmount;
     private float carbonAmount;
     private float fatAmount;
-    private float waterAmount;
 
     // Method to add food item
     public void CollectFood(Attributes food)
@@ -36,10 +33,6 @@ public class FoodManager : MonoBehaviour
             case FoodType.Fat:
                 fatAmount += food.value;
                 fatSlider.value = fatAmount;
-                break;
-            case FoodType.Water:
-                waterAmount += food.value;
-                waterSlider.value = waterAmount;
                 break;
         }
     }
@@ -64,10 +57,6 @@ public class FoodManager : MonoBehaviour
             case FoodType.Fat:
                 fatAmount -= food.value;
                 fatSlider.value = Mathf.Max(fatAmount, 0);
-                break;
-            case FoodType.Water:
-                waterAmount -= food.value;
-                waterSlider.value = Mathf.Max(waterAmount, 0);
                 break;
         }
     }

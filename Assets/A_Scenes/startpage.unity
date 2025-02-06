@@ -1040,9 +1040,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2136384136}
-        m_TargetAssemblyTypeName: SceneTransitionManager, Assembly-CSharp
-        m_MethodName: GoToScene
+      - m_Target: {fileID: 2136384135}
+        m_TargetAssemblyTypeName: SceneSwap, Assembly-CSharp
+        m_MethodName: Swap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1347,17 +1347,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1029348155}
   m_SourcePrefab: {fileID: 100100000, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
---- !u!114 &1790088314 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4511806899271917441, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-  m_PrefabInstance: {fileID: 1790088313}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d17b16cbb9cb640a0f1211848d637c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1804142167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1479,7 +1468,7 @@ GameObject:
   - component: {fileID: 2136384134}
   - component: {fileID: 2136384133}
   - component: {fileID: 2136384132}
-  - component: {fileID: 2136384136}
+  - component: {fileID: 2136384135}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1556,7 +1545,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2136384136
+--- !u!114 &2136384135
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1565,11 +1554,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2136384131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c82847e6c6ff9904aa2bf121e12e8e9d, type: 3}
+  m_Script: {fileID: 11500000, guid: a7185338fadcf0c438cec69e4a31203f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeScreen: {fileID: 1790088314}
-  targetScene: Tutorial
+  scene1: Tutorial
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
