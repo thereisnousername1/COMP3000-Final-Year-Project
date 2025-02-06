@@ -1,18 +1,32 @@
 using Unity.VisualScripting;
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class HoomanBehavior : MonoBehaviour
 {
+    GameObject playerObj;
+
     public Transform head;
     public Transform player; // target(player)
     public float maxSpeed = 3f;
     public float acceleration = 1f;
     public float rotateSpeed = 2f;
 
+    Vector3 moveDirection;
+
+    // difficulty varies
+    public static float hoomanResponseTime;
+
     private Rigidbody rb; // Rigidbody for physics
     private float currentSpeed = 0f;
 
-    private bool isKnockedBack = false; // Is object getting hit?
+    public bool isKnockedBack = false; // Is object getting hit?
+
+    Vector3 directionToPlayer;
+    Quaternion targetRotation;
+    float headTiltX;
+    float tempX, tempY, tempZ;
 
     void Start()
     {
@@ -20,7 +34,7 @@ public class HoomanBehavior : MonoBehaviour
         if (player == null)
         {
             // Find player automatically by FindWithTag
-            GameObject playerObj = GameObject.FindWithTag("Player");
+            playerObj = GameObject.FindWithTag("Player");
             if (playerObj != null)
             {
                 player = playerObj.transform;
@@ -37,17 +51,17 @@ public class HoomanBehavior : MonoBehaviour
 
 #region Head spinning logic
         // Spin their head towards player
-        Vector3 directionToPlayer = player.position - head.position;
-        Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
+        directionToPlayer = player.position - head.position;
+        targetRotation = Quaternion.LookRotation(directionToPlayer);
 
         // Add an upward offset to make the Hooman look up slightly
         directionToPlayer.y += 0.5f; // Adjust this value for the amount of "looking up"
 
         // Check head tilt
-        float headTiltX = Quaternion.Angle(Quaternion.identity, head.localRotation);
-        float tempX = head.localPosition.x;
-        float tempY = head.localPosition.y;
-        float tempZ = head.localPosition.z;
+        headTiltX = Quaternion.Angle(Quaternion.identity, head.localRotation);
+        tempX = head.localPosition.x;
+        tempY = head.localPosition.y;
+        tempZ = head.localPosition.z;
 
         if (head.localPosition.x != tempX || head.localPosition.y != tempY)
             head.localPosition = Vector3.Lerp(
@@ -84,7 +98,8 @@ public class HoomanBehavior : MonoBehaviour
 #endregion
 
         // Movement logic
-        Vector3 moveDirection = (player.position - transform.position).normalized;
+        moveDirection = (player.position - transform.position).normalized;
+
         currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, acceleration * Time.deltaTime);
         rb.linearVelocity = moveDirection * currentSpeed;
     }
@@ -97,13 +112,39 @@ public class HoomanBehavior : MonoBehaviour
 
         rb.linearVelocity = hitDirection.normalized * hitForce;
     }
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
+        /*
         if (isKnockedBack && collision.gameObject.CompareTag("Floor"))
         {
             // return to normal
-            isKnockedBack = false;
-            rb.linearVelocity = Vector3.zero;
+            // isKnockedBack = false;
+            // rb.linearVelocity = Vector3.zero;
+            
+            StartCoroutine(GetUp());
         }
+        */
+
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+
+            if (isKnockedBack)
+            {
+                // return to normal
+                // isKnockedBack = false;
+                // rb.linearVelocity = Vector3.zero;
+
+                StartCoroutine(GetUp());
+            }
+        }
+    }
+
+    IEnumerator GetUp()
+    {
+        yield return new WaitForSeconds(hoomanResponseTime);
+
+        // return to normal
+        isKnockedBack = false;
+        rb.linearVelocity = Vector3.zero;
     }
 }

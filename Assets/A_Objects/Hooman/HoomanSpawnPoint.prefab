@@ -151,6 +151,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoomanPrefab: {fileID: 590658978612977366, guid: 51e950719fc93cb46afcfdc04137e6d0, type: 3}
   spawnPoint: {fileID: 486016016875826573}
-  maxHoomanCount: 100
+  maxHoomanCount: 10
   preparationTime: 3
   spawnDelay: 0
