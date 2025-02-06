@@ -52,6 +52,13 @@ public class SceneTransitionManager : MonoBehaviour
     
     public void GoBack()
     {
+        // restore data to prevent cheating
+        ExitChecking.VeggieScore = 0;
+        ExitChecking.CarbonScore = 0;
+        ExitChecking.ProteinScore = 0;
+        ExitChecking.FatScore = 0;
+        ExitChecking.WaterScore = 0;
+
         StartCoroutine(GoBackRoutine());
     }
 
