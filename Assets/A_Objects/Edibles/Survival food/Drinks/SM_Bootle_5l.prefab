@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5741484953196546470}
   - component: {fileID: 6359670611881954422}
   - component: {fileID: 8548124120354236825}
+  - component: {fileID: 4137137101919140052}
   m_Layer: 0
   m_Name: SM_Bootle_5l
   m_TagString: Untagged
@@ -260,3 +261,16 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
+--- !u!114 &4137137101919140052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7877401182323849714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItem: {fileID: 11400000, guid: 71a6717d5c88b9349bff4a4514ed5041, type: 2}

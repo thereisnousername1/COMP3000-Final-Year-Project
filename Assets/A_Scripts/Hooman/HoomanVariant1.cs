@@ -19,8 +19,10 @@ public class HoomanVariant1 : HoomanBehavior
 
 
 
-private IEnumerator GoToSceneRoutine()
+    private IEnumerator GoToSceneRoutine()
     {
+        yield return new WaitForSeconds(2);
+
         fadeScreen.gameObject.SetActive(true);
         fadeScreen.FadeOut();
         yield return new WaitForSeconds(fadeScreen.fadeDuration);

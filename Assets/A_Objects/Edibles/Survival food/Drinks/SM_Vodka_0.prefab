@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1404448988726409105}
   - component: {fileID: 9222662603056940922}
   - component: {fileID: 6337704584209526391}
+  - component: {fileID: -4955941914797288568}
   m_Layer: 0
   m_Name: SM_Vodka_0
   m_TagString: Untagged
@@ -260,3 +261,16 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
+--- !u!114 &-4955941914797288568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5538141144370974955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItem: {fileID: 11400000, guid: 71a6717d5c88b9349bff4a4514ed5041, type: 2}

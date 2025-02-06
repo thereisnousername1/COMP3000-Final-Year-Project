@@ -12,6 +12,7 @@ public class SceneTransitionManager : MonoBehaviour
     [SerializeField]
     private string targetScene;
 
+#region Start
     private void Start()
     {
         StartScene();
@@ -35,7 +36,9 @@ public class SceneTransitionManager : MonoBehaviour
         // set FadeScreen to inactive, to prevent blocking ray interactors and UI canvas
         fadeScreen.gameObject.SetActive(false);
     }
+#endregion
 
+#region Single scene (for easier management, alright it is because I am too lazy)
     public void GoToScene()
     {
         StartCoroutine(GoToSceneRoutine());
@@ -49,7 +52,25 @@ public class SceneTransitionManager : MonoBehaviour
 
         SceneManager.LoadScene(targetScene);
     }
-    
+#endregion
+
+#region Multiple scene
+    public void GoToScene(string scene)
+    {
+        StartCoroutine(GoToSceneRoutine(scene));
+    }
+
+    private IEnumerator GoToSceneRoutine(string scene)
+    {
+        fadeScreen.gameObject.SetActive(true);
+        fadeScreen.FadeOut();
+        yield return new WaitForSeconds(fadeScreen.fadeDuration);
+
+        SceneManager.LoadScene(scene);
+    }
+#endregion
+
+#region Back to Main menu with reset
     public void GoBack()
     {
         // restore data to prevent cheating
@@ -70,6 +91,7 @@ public class SceneTransitionManager : MonoBehaviour
 
         SceneManager.LoadScene("startpage");
     }
+#endregion
 
     /*  pause the game in the GameMenuManager
     public void PauseGame()
