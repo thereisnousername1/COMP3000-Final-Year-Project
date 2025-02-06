@@ -112,10 +112,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4934848605506738347, guid: bb50e34e7da8b0543aa532c77c3cc4b9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934848605506738347, guid: bb50e34e7da8b0543aa532c77c3cc4b9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 4934848605506738347, guid: bb50e34e7da8b0543aa532c77c3cc4b9, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     - target: {fileID: 4954416816957042473, guid: bb50e34e7da8b0543aa532c77c3cc4b9, type: 3}
       propertyPath: m_Name
       value: SM_Sausages_01_Rotten
       objectReference: {fileID: 0}
+    - target: {fileID: 5049110713476576167, guid: bb50e34e7da8b0543aa532c77c3cc4b9, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 157640584026495541}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -134,6 +150,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 1916228241431628516, guid: 248ea1bf2a2bf6341bbb7b23ee96403a, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916228241431628516, guid: 248ea1bf2a2bf6341bbb7b23ee96403a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 1916228241431628516, guid: 248ea1bf2a2bf6341bbb7b23ee96403a, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
+    - target: {fileID: 4201411343398924442, guid: 248ea1bf2a2bf6341bbb7b23ee96403a, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 7579707799649275658}
     - target: {fileID: 7985719320711198430, guid: 248ea1bf2a2bf6341bbb7b23ee96403a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.025318
@@ -196,6 +228,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 1870728525039202448, guid: c0b382f631bd67c4386437e7da7a6117, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 5442694174816156777}
+    - target: {fileID: 3472615721551801088, guid: c0b382f631bd67c4386437e7da7a6117, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472615721551801088, guid: c0b382f631bd67c4386437e7da7a6117, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 3472615721551801088, guid: c0b382f631bd67c4386437e7da7a6117, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     - target: {fileID: 4831206196599430546, guid: c0b382f631bd67c4386437e7da7a6117, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.332329
@@ -262,6 +310,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 2724397768920822554, guid: ae5bc2dd7e5f6a64a8c7ebd34ce0adc0, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 5976481203829216270}
     - target: {fileID: 4209301697616451062, guid: ae5bc2dd7e5f6a64a8c7ebd34ce0adc0, type: 3}
       propertyPath: m_Name
       value: SM_Salmon_Cooked
@@ -306,6 +358,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9183356857547369691, guid: ae5bc2dd7e5f6a64a8c7ebd34ce0adc0, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9183356857547369691, guid: ae5bc2dd7e5f6a64a8c7ebd34ce0adc0, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 9183356857547369691, guid: ae5bc2dd7e5f6a64a8c7ebd34ce0adc0, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -372,6 +436,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 42.649
       objectReference: {fileID: 0}
+    - target: {fileID: 7940085229751324308, guid: 8a66663da488e2a4aac1b45bfe87ef46, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940085229751324308, guid: 8a66663da488e2a4aac1b45bfe87ef46, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 7940085229751324308, guid: 8a66663da488e2a4aac1b45bfe87ef46, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
+    - target: {fileID: 8085727298234022984, guid: 8a66663da488e2a4aac1b45bfe87ef46, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 6275732876469887831}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -430,6 +510,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2266133061856813074, guid: ecd8ddf7743cb534999d0e90c08704a7, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 1414619313253408590}
+    - target: {fileID: 3294059046853584933, guid: ecd8ddf7743cb534999d0e90c08704a7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294059046853584933, guid: ecd8ddf7743cb534999d0e90c08704a7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 3294059046853584933, guid: ecd8ddf7743cb534999d0e90c08704a7, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     - target: {fileID: 6411756408269480565, guid: ecd8ddf7743cb534999d0e90c08704a7, type: 3}
       propertyPath: m_Name
       value: SM_Carp_Rotten
@@ -492,10 +588,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2856789651411481074, guid: 507fc86f328e9bb4592bd42e6c9f0b4a, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2856789651411481074, guid: 507fc86f328e9bb4592bd42e6c9f0b4a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 2856789651411481074, guid: 507fc86f328e9bb4592bd42e6c9f0b4a, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     - target: {fileID: 7486565930748871442, guid: 507fc86f328e9bb4592bd42e6c9f0b4a, type: 3}
       propertyPath: m_Name
       value: SM_Chiken_Fillet_Rotten
       objectReference: {fileID: 0}
+    - target: {fileID: 7527269508664551061, guid: 507fc86f328e9bb4592bd42e6c9f0b4a, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 2520440768274380683}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -514,6 +626,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 121041353407562966, guid: 220e07477861ad349ac0a669d8165763, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 121041353407562966, guid: 220e07477861ad349ac0a669d8165763, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 121041353407562966, guid: 220e07477861ad349ac0a669d8165763, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     - target: {fileID: 3953099314172199666, guid: 220e07477861ad349ac0a669d8165763, type: 3}
       propertyPath: m_Name
       value: SM_Herring_Rotten
@@ -558,6 +682,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7666650617104230223, guid: 220e07477861ad349ac0a669d8165763, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 5573968522669462156}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -624,6 +752,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -16.662
       objectReference: {fileID: 0}
+    - target: {fileID: 8281591877091830719, guid: 2e2331789ebf33043b15162f4f17db71, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 980699698612019491}
+    - target: {fileID: 9086321443271589245, guid: 2e2331789ebf33043b15162f4f17db71, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086321443271589245, guid: 2e2331789ebf33043b15162f4f17db71, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 9086321443271589245, guid: 2e2331789ebf33043b15162f4f17db71, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -682,6 +826,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4585237324338446574, guid: e815eefb39dcd9e4f84b442766346b17, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4585237324338446574, guid: e815eefb39dcd9e4f84b442766346b17, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 4585237324338446574, guid: e815eefb39dcd9e4f84b442766346b17, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
+    - target: {fileID: 5335132270811719537, guid: e815eefb39dcd9e4f84b442766346b17, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 950640212201545884}
     - target: {fileID: 5843365749249480445, guid: e815eefb39dcd9e4f84b442766346b17, type: 3}
       propertyPath: m_Name
       value: SM_Herring_Cooked
@@ -708,6 +868,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 471505227756439253, guid: 0840144477acd9047be11d22fbc5d606, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 1706336931210058547}
+    - target: {fileID: 1853079269500848161, guid: 0840144477acd9047be11d22fbc5d606, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853079269500848161, guid: 0840144477acd9047be11d22fbc5d606, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 1853079269500848161, guid: 0840144477acd9047be11d22fbc5d606, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     - target: {fileID: 2641095750276969010, guid: 0840144477acd9047be11d22fbc5d606, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.572285
@@ -814,6 +990,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Rabbit_Rotten
       objectReference: {fileID: 0}
+    - target: {fileID: 4540966765534664935, guid: 9177aec92bfa1bf4dbc5a34653012f1d, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540966765534664935, guid: 9177aec92bfa1bf4dbc5a34653012f1d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 4540966765534664935, guid: 9177aec92bfa1bf4dbc5a34653012f1d, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
+    - target: {fileID: 8546871390738904546, guid: 9177aec92bfa1bf4dbc5a34653012f1d, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 3725055055506747480}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -876,6 +1068,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4878002398789129814, guid: 1a8a26e9ddabf0c41ab3a07d42848d8e, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878002398789129814, guid: 1a8a26e9ddabf0c41ab3a07d42848d8e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 4878002398789129814, guid: 1a8a26e9ddabf0c41ab3a07d42848d8e, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
+    - target: {fileID: 5931938149577275352, guid: 1a8a26e9ddabf0c41ab3a07d42848d8e, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 2163047128676769328}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -894,6 +1102,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 4252357086198081995, guid: 3147af032fd78334ab5bb0c2f22cff03, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 7774853630664031041}
+    - target: {fileID: 4957335383042036832, guid: 3147af032fd78334ab5bb0c2f22cff03, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957335383042036832, guid: 3147af032fd78334ab5bb0c2f22cff03, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 4957335383042036832, guid: 3147af032fd78334ab5bb0c2f22cff03, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     - target: {fileID: 5967059721450722664, guid: 3147af032fd78334ab5bb0c2f22cff03, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.303936
@@ -1000,6 +1224,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5530277603196919194, guid: 006ceca652565af47a2db29cf3832c35, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 571924816564452868}
+    - target: {fileID: 7695512349863548823, guid: 006ceca652565af47a2db29cf3832c35, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7695512349863548823, guid: 006ceca652565af47a2db29cf3832c35, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 7695512349863548823, guid: 006ceca652565af47a2db29cf3832c35, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1018,10 +1258,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 1250288489855513250, guid: 217c3289727884d4f94a28e211f08b4e, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250288489855513250, guid: 217c3289727884d4f94a28e211f08b4e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 1250288489855513250, guid: 217c3289727884d4f94a28e211f08b4e, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     - target: {fileID: 7513819410757258349, guid: 217c3289727884d4f94a28e211f08b4e, type: 3}
       propertyPath: m_Name
       value: SM_Rabbit_Cooked
       objectReference: {fileID: 0}
+    - target: {fileID: 7642884702498851312, guid: 217c3289727884d4f94a28e211f08b4e, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 3590188604783577107}
     - target: {fileID: 8397447136095949514, guid: 217c3289727884d4f94a28e211f08b4e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.400173
@@ -1120,6 +1376,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3603769012345339929, guid: f3da141bfb9fdcd42bbd7137f6635c84, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 5671870717104077850}
+    - target: {fileID: 6565965423193902210, guid: f3da141bfb9fdcd42bbd7137f6635c84, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565965423193902210, guid: f3da141bfb9fdcd42bbd7137f6635c84, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 6565965423193902210, guid: f3da141bfb9fdcd42bbd7137f6635c84, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     - target: {fileID: 7651083871479087066, guid: f3da141bfb9fdcd42bbd7137f6635c84, type: 3}
       propertyPath: m_Name
       value: SM_Ribs_Rotten
@@ -1142,6 +1414,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 2139108707561982708, guid: b25027798ad08614e8f6386547d26b98, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 4139535300109826386}
     - target: {fileID: 6599210599093237557, guid: b25027798ad08614e8f6386547d26b98, type: 3}
       propertyPath: m_Name
       value: SM_Meat_Raw
@@ -1186,6 +1462,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9107495803974096653, guid: b25027798ad08614e8f6386547d26b98, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107495803974096653, guid: b25027798ad08614e8f6386547d26b98, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 9107495803974096653, guid: b25027798ad08614e8f6386547d26b98, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1244,10 +1532,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 900290879718841614, guid: f3eafc5472addef4c8cf5dd91210df60, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 6278870823372843073}
     - target: {fileID: 1076347280410639430, guid: f3eafc5472addef4c8cf5dd91210df60, type: 3}
       propertyPath: m_Name
       value: SM_Sausages_01_Cooked
       objectReference: {fileID: 0}
+    - target: {fileID: 5757981736585780822, guid: f3eafc5472addef4c8cf5dd91210df60, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5757981736585780822, guid: f3eafc5472addef4c8cf5dd91210df60, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 5757981736585780822, guid: f3eafc5472addef4c8cf5dd91210df60, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1266,6 +1570,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 589097450760981291, guid: 5510da84fa43fd248952ab1899d91abb, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 589097450760981291, guid: 5510da84fa43fd248952ab1899d91abb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 589097450760981291, guid: 5510da84fa43fd248952ab1899d91abb, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     - target: {fileID: 2150412133923107623, guid: 5510da84fa43fd248952ab1899d91abb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.234848
@@ -1306,6 +1622,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.031
       objectReference: {fileID: 0}
+    - target: {fileID: 3518779421629826826, guid: 5510da84fa43fd248952ab1899d91abb, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 5335312008339940930}
     - target: {fileID: 4303138839622710388, guid: 5510da84fa43fd248952ab1899d91abb, type: 3}
       propertyPath: m_Name
       value: SM_Deer_Cooked
@@ -1332,6 +1652,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 2941842192358363322, guid: 58be7cd4381b57d468e4ecc8eeeb61fc, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2941842192358363322, guid: 58be7cd4381b57d468e4ecc8eeeb61fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 2941842192358363322, guid: 58be7cd4381b57d468e4ecc8eeeb61fc, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     - target: {fileID: 6342414982969151010, guid: 58be7cd4381b57d468e4ecc8eeeb61fc, type: 3}
       propertyPath: m_Name
       value: SM_Deer_Rotten
@@ -1380,6 +1712,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 10.566
       objectReference: {fileID: 0}
+    - target: {fileID: 7115718701452926715, guid: 58be7cd4381b57d468e4ecc8eeeb61fc, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 260909701051712543}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1398,6 +1734,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 2442767750944218632, guid: 8582a340e4814b44ab030cab06e9f71c, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 1826325424590483041}
     - target: {fileID: 3711738704859822611, guid: 8582a340e4814b44ab030cab06e9f71c, type: 3}
       propertyPath: m_Name
       value: SM_Meat_Rotten
@@ -1442,6 +1782,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6986612945780191484, guid: 8582a340e4814b44ab030cab06e9f71c, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6986612945780191484, guid: 8582a340e4814b44ab030cab06e9f71c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 6986612945780191484, guid: 8582a340e4814b44ab030cab06e9f71c, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1500,10 +1852,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3853574396983068432, guid: 902c0a57ef10f4746b81d7b5ecf795f4, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 7250274337101371809}
     - target: {fileID: 4516829678098612922, guid: 902c0a57ef10f4746b81d7b5ecf795f4, type: 3}
       propertyPath: m_Name
       value: SM_Carp_Cooked
       objectReference: {fileID: 0}
+    - target: {fileID: 5900633106264718288, guid: 902c0a57ef10f4746b81d7b5ecf795f4, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5900633106264718288, guid: 902c0a57ef10f4746b81d7b5ecf795f4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 5900633106264718288, guid: 902c0a57ef10f4746b81d7b5ecf795f4, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1522,6 +1890,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 113607232877935680, guid: c5fcec0434f42d54bb2fe0a833aaf09f, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 113607232877935680, guid: c5fcec0434f42d54bb2fe0a833aaf09f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 113607232877935680, guid: c5fcec0434f42d54bb2fe0a833aaf09f, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
+    - target: {fileID: 931920232024708268, guid: c5fcec0434f42d54bb2fe0a833aaf09f, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 4281718627600419058}
     - target: {fileID: 1092755263762977765, guid: c5fcec0434f42d54bb2fe0a833aaf09f, type: 3}
       propertyPath: m_Name
       value: SM_Rabbit_Raw
@@ -1584,6 +1968,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 642507023500256668, guid: 0985337df6979fc45b425bc919715339, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 642507023500256668, guid: 0985337df6979fc45b425bc919715339, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 642507023500256668, guid: 0985337df6979fc45b425bc919715339, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
+    - target: {fileID: 4308061873472732998, guid: 0985337df6979fc45b425bc919715339, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 4119426187326424970}
     - target: {fileID: 6583871373822515936, guid: 0985337df6979fc45b425bc919715339, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.273392
@@ -1646,6 +2046,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 2217096069428479120, guid: 9652bb3227c488a4a86b9f7bd0ee4de8, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217096069428479120, guid: 9652bb3227c488a4a86b9f7bd0ee4de8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 2217096069428479120, guid: 9652bb3227c488a4a86b9f7bd0ee4de8, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
+    - target: {fileID: 2826525856096041320, guid: 9652bb3227c488a4a86b9f7bd0ee4de8, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 3035367914974384718}
     - target: {fileID: 3326706842198854944, guid: 9652bb3227c488a4a86b9f7bd0ee4de8, type: 3}
       propertyPath: m_Name
       value: SM_Pig_Rotten
@@ -1712,6 +2128,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 3526184768659579906, guid: ca5ac47677e9de04db0986d0ba7d0597, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 1711055099392913221}
+    - target: {fileID: 5580639887358599645, guid: ca5ac47677e9de04db0986d0ba7d0597, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5580639887358599645, guid: ca5ac47677e9de04db0986d0ba7d0597, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 5580639887358599645, guid: ca5ac47677e9de04db0986d0ba7d0597, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     - target: {fileID: 5831181585571769140, guid: ca5ac47677e9de04db0986d0ba7d0597, type: 3}
       propertyPath: m_Name
       value: SM_Sausages_02_Raw
@@ -1818,6 +2250,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Ribs_Raw
       objectReference: {fileID: 0}
+    - target: {fileID: 7863459929352077339, guid: f0a17a8f844079241bd979a02a55d6ef, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 7305514797544384750}
+    - target: {fileID: 8797976181914344464, guid: f0a17a8f844079241bd979a02a55d6ef, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797976181914344464, guid: f0a17a8f844079241bd979a02a55d6ef, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 8797976181914344464, guid: f0a17a8f844079241bd979a02a55d6ef, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1836,6 +2284,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 526734696451370754, guid: 4fab0f869733f50439e8244bef779daa, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 526734696451370754, guid: 4fab0f869733f50439e8244bef779daa, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 526734696451370754, guid: 4fab0f869733f50439e8244bef779daa, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
+    - target: {fileID: 4291532172463125299, guid: 4fab0f869733f50439e8244bef779daa, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 1158990514966225317}
     - target: {fileID: 5497632033372227412, guid: 4fab0f869733f50439e8244bef779daa, type: 3}
       propertyPath: m_Name
       value: SM_Carp_Raw
@@ -1898,6 +2362,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 1997220785673506649, guid: 16eb1ebbba7fb2c42982ea3b1a1b7072, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 3166159414680695905}
     - target: {fileID: 3793165253696194092, guid: 16eb1ebbba7fb2c42982ea3b1a1b7072, type: 3}
       propertyPath: m_Name
       value: SM_Chiken_Fillet_Cooked
@@ -1946,6 +2414,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8823840850054885745, guid: 16eb1ebbba7fb2c42982ea3b1a1b7072, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823840850054885745, guid: 16eb1ebbba7fb2c42982ea3b1a1b7072, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 8823840850054885745, guid: 16eb1ebbba7fb2c42982ea3b1a1b7072, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2004,6 +2484,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6713648211081392307, guid: 086ba53924bc0c04a9646a869a913298, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 7710886355924622435}
+    - target: {fileID: 6937353413976716835, guid: 086ba53924bc0c04a9646a869a913298, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937353413976716835, guid: 086ba53924bc0c04a9646a869a913298, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 6937353413976716835, guid: 086ba53924bc0c04a9646a869a913298, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     - target: {fileID: 8216862299504296072, guid: 086ba53924bc0c04a9646a869a913298, type: 3}
       propertyPath: m_Name
       value: SM_Sausages_02_Rotten
@@ -2026,6 +2522,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 1638019900119805688, guid: 629c83811e56eff45b9c822120325bfe, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638019900119805688, guid: 629c83811e56eff45b9c822120325bfe, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 1638019900119805688, guid: 629c83811e56eff45b9c822120325bfe, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
     - target: {fileID: 3947330504057389729, guid: 629c83811e56eff45b9c822120325bfe, type: 3}
       propertyPath: m_Name
       value: SM_Salmon_Raw
@@ -2070,6 +2578,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6122521913493843307, guid: 629c83811e56eff45b9c822120325bfe, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 4235279884202284877}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2088,6 +2600,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8134665752324626100}
     m_Modifications:
+    - target: {fileID: 1346294087728005322, guid: c997d071dcedf3f4eb5b4065f05b4cdd, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346294087728005322, guid: c997d071dcedf3f4eb5b4065f05b4cdd, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+    - target: {fileID: 1346294087728005322, guid: c997d071dcedf3f4eb5b4065f05b4cdd, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
+    - target: {fileID: 2865757191791841419, guid: c997d071dcedf3f4eb5b4065f05b4cdd, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 1615376279832642109}
     - target: {fileID: 6666243957727748949, guid: c997d071dcedf3f4eb5b4065f05b4cdd, type: 3}
       propertyPath: m_Name
       value: SM_Sausages_02_Cooked
