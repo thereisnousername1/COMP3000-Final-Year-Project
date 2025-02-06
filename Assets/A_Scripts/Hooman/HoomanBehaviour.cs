@@ -1,6 +1,4 @@
-using Oculus.Interaction;
-using System;
-using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HoomanBehavior : MonoBehaviour
@@ -10,11 +8,6 @@ public class HoomanBehavior : MonoBehaviour
     public float maxSpeed = 3f;
     public float acceleration = 1f;
     public float rotateSpeed = 2f;
-
-    Vector3 moveDirection;
-
-    // difficulty varies
-    public static float hoomanResponseTime;
 
     private Rigidbody rb; // Rigidbody for physics
     private float currentSpeed = 0f;
@@ -91,8 +84,7 @@ public class HoomanBehavior : MonoBehaviour
 #endregion
 
         // Movement logic
-        moveDirection = (player.position - transform.position).normalized;
-
+        Vector3 moveDirection = (player.position - transform.position).normalized;
         currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, acceleration * Time.deltaTime);
         rb.linearVelocity = moveDirection * currentSpeed;
     }
@@ -107,37 +99,11 @@ public class HoomanBehavior : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        /*
         if (isKnockedBack && collision.gameObject.CompareTag("Floor"))
         {
             // return to normal
-            // isKnockedBack = false;
-            // rb.linearVelocity = Vector3.zero;
-            
-            StartCoroutine(GetUp());
+            isKnockedBack = false;
+            rb.linearVelocity = Vector3.zero;
         }
-        */
-
-        if (collision.gameObject.CompareTag("Floor"))
-        {
-
-            if (isKnockedBack)
-            {
-                // return to normal
-                // isKnockedBack = false;
-                // rb.linearVelocity = Vector3.zero;
-
-                StartCoroutine(GetUp());
-            }
-        }
-    }
-
-    IEnumerator GetUp()
-    {
-        yield return new WaitForSeconds(hoomanResponseTime);
-
-        // return to normal
-        isKnockedBack = false;
-        rb.linearVelocity = Vector3.zero;
     }
 }

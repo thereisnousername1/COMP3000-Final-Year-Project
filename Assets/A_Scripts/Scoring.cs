@@ -1,10 +1,8 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Scoring : MonoBehaviour
 {
-    public TextMeshProUGUI Value1, Value2, Value3, Value4, Value5;
+
     public static float TotalScore;
 
     public float VeggieScore = 0, CarbonScore = 0, ProteinScore = 0, FatScore = 0, WaterScore = 0;
@@ -24,13 +22,6 @@ public class Scoring : MonoBehaviour
         ExitChecking.ProteinScore = 0;
         ExitChecking.FatScore = 0;
         ExitChecking.WaterScore = 0;
-
-        Value1.text = "" + VeggieScore;
-        Value2.text = "" + CarbonScore;
-        Value3.text = "" + ProteinScore;
-        Value4.text = "" + FatScore;
-        Value5.text = "" + WaterScore;
-
 
         // simple logic
         float sum = (VeggieScore + CarbonScore + ProteinScore) - FatScore;

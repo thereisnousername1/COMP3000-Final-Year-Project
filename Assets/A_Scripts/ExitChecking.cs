@@ -1,11 +1,10 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ExitChecking : MonoBehaviour
 {
-    // public FoodManager foodManager;
+    public FoodManager foodManager;
 
     public FadeScreen fadeScreen;
 
@@ -23,15 +22,12 @@ public class ExitChecking : MonoBehaviour
         if (other.GetComponent<FoodManager>() != null)
         {
             Debug.Log("Detected trolley entered");
-            // foodManager = other.GetComponent<FoodManager>();
+            foodManager = other.GetComponent<FoodManager>();
             // foodManager.veggieSlider.value = 0;
-            VeggieScore += other.GetComponent<FoodManager>().veggieSlider.value;
-            CarbonScore += other.GetComponent<FoodManager>().carbonSlider.value;
-            ProteinScore += other.GetComponent<FoodManager>().proteinSlider.value;
-            FatScore += other.GetComponent<FoodManager>().fatSlider.value;
-            WaterScore += other.GetComponent<FoodManager>().waterSlider.value;
-
-            TotalScore += VeggieScore + CarbonScore + ProteinScore + FatScore + WaterScore;
+            VeggieScore += foodManager.veggieSlider.value;
+            CarbonScore += foodManager.carbonSlider.value;
+            ProteinScore += foodManager.proteinSlider.value;
+            FatScore += foodManager.fatSlider.value;
         }
 
         if (other.gameObject.CompareTag("Player"))
@@ -47,14 +43,12 @@ public class ExitChecking : MonoBehaviour
         if (other.GetComponent<FoodManager>() != null)
         {
             Debug.Log("Detected trolley exited");
+            foodManager = null;
 
-            VeggieScore -= other.GetComponent<FoodManager>().veggieSlider.value;
-            CarbonScore -= other.GetComponent<FoodManager>().carbonSlider.value;
-            ProteinScore -= other.GetComponent<FoodManager>().proteinSlider.value;
-            FatScore -= other.GetComponent<FoodManager>().fatSlider.value;
-            WaterScore -= other.GetComponent<FoodManager>().waterSlider.value;
-
-            TotalScore -= (VeggieScore + CarbonScore + ProteinScore + FatScore + WaterScore);
+            VeggieScore -= foodManager.veggieSlider.value;
+            CarbonScore -= foodManager.carbonSlider.value;
+            ProteinScore -= foodManager.proteinSlider.value;
+            FatScore -= foodManager.fatSlider.value;
         }
     }
 

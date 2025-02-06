@@ -230,5 +230,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a28f481f1a9bf9d46bcc0515a46631be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeScreen: {fileID: 0}
-  TotalScore: 0
+  foodManager: {fileID: 0}
