@@ -1,27 +1,32 @@
 using Meta.XR.Editor.Tags;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Trolley : MonoBehaviour
 {
     public FoodManager foodManager;
-    Attributes foodItem;
+    List<Attributes> foodItems;
 
     private void OnTriggerEnter(Collider other)
     {
         // Check if the object entering is a food item
         // Attributes foodItem = other.GetComponent<FoodItemBehaviour>()?.foodItem;
 
-        //Attributes foodItem = other.TryGetComponent<FoodItemBehaviour>()?.foodItem;
+        //bool value = other.TryGetComponent<FoodItemBehaviour>(out FoodItemBehaviour foodItem);
 
         //if(other.GetComponent<FoodItemBehaviour>() != null)
 
-        foodItem = other.GetComponent<FoodItemBehaviour>()?.foodItem;
-
-        if (foodItem != null)
+        //foodItem = other.GetComponent<FoodItemBehaviour>()?.foodItem;
+        foodItems = other.GetComponent<FoodItemBehaviour>()?.foodItems;
+        
+        if (foodItems != null)
         {
-            // Add food item to the food manager
-            foodManager.CollectFood(foodItem);
+            foreach (Attributes foodItem in foodItems)
+            {
+                // Add food item to the food manager
+                foodManager.CollectFood(foodItem);
+            }
             // Destroy(other.gameObject);
 
             // try to fix the physics lag
@@ -34,12 +39,15 @@ public class Trolley : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         // Check if the object exiting is a food item
-        Attributes foodItem = other.GetComponent<FoodItemBehaviour>()?.foodItem;
+        foodItems = other.GetComponent<FoodItemBehaviour>()?.foodItems;
 
-        if (foodItem != null)
+        if (foodItems != null)
         {
-            // Remove food item from the food manager
-            foodManager.RemoveFood(foodItem);
+            foreach (Attributes foodItem in foodItems)
+            {
+                // Remove food item from the food manager
+                foodManager.RemoveFood(foodItem);
+            }
 
             other.transform.SetParent(null);
         }

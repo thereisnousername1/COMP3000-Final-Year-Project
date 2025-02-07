@@ -14,13 +14,14 @@ GameObject:
   - component: {fileID: 4081496162351842303}
   - component: {fileID: 2299951715642349442}
   - component: {fileID: 8546871390738904546}
+  - component: {fileID: -3688014297581590226}
   m_Layer: 0
   m_Name: SM_Rabbit_Rotten
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &31252214228553052
 Transform:
   m_ObjectHideFlags: 0
@@ -67,7 +68,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6e4849b1ed705124d8f04a1c39b499dd, type: 2}
+  - {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+  - {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -260,3 +262,18 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
+--- !u!114 &-3688014297581590226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477889144728715835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItems:
+  - {fileID: 11400000, guid: f99eb47255378f6499e813291df0d9be, type: 2}
+  - {fileID: 11400000, guid: 7cd02393dc5d788449a9da33ab68597e, type: 2}

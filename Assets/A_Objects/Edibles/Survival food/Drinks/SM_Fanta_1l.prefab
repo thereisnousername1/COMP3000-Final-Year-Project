@@ -68,7 +68,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6e4849b1ed705124d8f04a1c39b499dd, type: 2}
+  - {fileID: 2100000, guid: 90b0f8a83e09b144c901812293dfffc3, type: 2}
+  - {fileID: 2100000, guid: 5385ada4ae313334db11d40d819c5286, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -273,4 +274,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodItem: {fileID: 11400000, guid: 71a6717d5c88b9349bff4a4514ed5041, type: 2}
+  foodItems:
+  - {fileID: 11400000, guid: 71a6717d5c88b9349bff4a4514ed5041, type: 2}
