@@ -1,0 +1,222 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2102334103278529951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4247890162264550609}
+  m_Layer: 0
+  m_Name: Group of beet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4247890162264550609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102334103278529951}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.4117, y: 0.1887, z: -21.5075}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9080948190832106962}
+  - {fileID: 1568786926056651289}
+  - {fileID: 6301627986986924188}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &543702530511976480
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4247890162264550609}
+    m_Modifications:
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.20670444
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849483894585258109, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_Name
+      value: SM_Beet_Raw (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+--- !u!4 &6301627986986924188 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+  m_PrefabInstance: {fileID: 543702530511976480}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3386282036516904302
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4247890162264550609}
+    m_Modifications:
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849483894585258109, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_Name
+      value: SM_Beet_Raw
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+--- !u!4 &9080948190832106962 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+  m_PrefabInstance: {fileID: 3386282036516904302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4989157928796977829
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4247890162264550609}
+    m_Modifications:
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1023044
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849483894585258109, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+      propertyPath: m_Name
+      value: SM_Beet_Raw (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+--- !u!4 &1568786926056651289 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5834553876063600828, guid: 7cd96798f7de6874eb48df3684e11dab, type: 3}
+  m_PrefabInstance: {fileID: 4989157928796977829}
+  m_PrefabAsset: {fileID: 0}
