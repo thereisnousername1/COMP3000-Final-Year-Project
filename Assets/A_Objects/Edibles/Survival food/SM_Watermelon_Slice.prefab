@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3473957473476038577}
   - component: {fileID: 6308472900873939244}
   - component: {fileID: 4659124203153904116}
+  - component: {fileID: -9082350794171550851}
   m_Layer: 0
   m_Name: SM_Watermelon_Slice
   m_TagString: Untagged
@@ -261,3 +262,28 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
+--- !u!205 &-9082350794171550851
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8140674543764493270}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1136302754491903224}
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1

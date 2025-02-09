@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2458062538810930027}
   - component: {fileID: 7666650617104230223}
   - component: {fileID: -8224866922001017351}
+  - component: {fileID: 5228837576093653161}
   m_Layer: 0
   m_Name: SM_Herring_Rotten
   m_TagString: Untagged
@@ -277,3 +278,28 @@ MonoBehaviour:
   foodItems:
   - {fileID: 11400000, guid: f99eb47255378f6499e813291df0d9be, type: 2}
   - {fileID: 11400000, guid: 7cd02393dc5d788449a9da33ab68597e, type: 2}
+--- !u!205 &5228837576093653161
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3953099314172199666}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 121041353407562966}
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1

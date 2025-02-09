@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 805672945315949597}
   - component: {fileID: 6270228761137067726}
   - component: {fileID: 3988188634372273021}
+  - component: {fileID: -1110736957173423389}
   m_Layer: 0
   m_Name: SM_Fly-agaric_Cooked
   m_TagString: Untagged
@@ -261,3 +262,28 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
+--- !u!205 &-1110736957173423389
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2956697674010008522}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 5622285431758287735}
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1

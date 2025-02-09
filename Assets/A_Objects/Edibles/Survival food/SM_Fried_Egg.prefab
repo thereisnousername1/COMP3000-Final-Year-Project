@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5659707569306955185}
   - component: {fileID: 6518054619410692403}
   - component: {fileID: 3532891687789275233}
+  - component: {fileID: 5863699338690721938}
   m_Layer: 0
   m_Name: SM_Fried_Egg
   m_TagString: Untagged
@@ -261,3 +262,28 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
+--- !u!205 &5863699338690721938
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600715088454499109}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3596609893255569832}
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1

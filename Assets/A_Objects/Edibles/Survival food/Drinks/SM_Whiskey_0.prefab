@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 208648682480958677}
   - component: {fileID: 7489380537613739687}
   - component: {fileID: -396263911651772057}
+  - component: {fileID: 822593328721512022}
   m_Layer: 0
   m_Name: SM_Whiskey_0
   m_TagString: Untagged
@@ -276,3 +277,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodItems:
   - {fileID: 11400000, guid: 71a6717d5c88b9349bff4a4514ed5041, type: 2}
+--- !u!205 &822593328721512022
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8824737501184871664}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7267458408555290360}
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1

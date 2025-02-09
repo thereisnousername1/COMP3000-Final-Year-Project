@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8128663314544433783}
   - component: {fileID: 163767201443682141}
   - component: {fileID: -4821690339178019283}
+  - component: {fileID: -4871524821606728230}
   m_Layer: 0
   m_Name: SM_Sprite_0
   m_TagString: Untagged
@@ -276,3 +277,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodItems:
   - {fileID: 11400000, guid: 71a6717d5c88b9349bff4a4514ed5041, type: 2}
+--- !u!205 &-4871524821606728230
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6379430673593378411}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3762884086111791170}
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1

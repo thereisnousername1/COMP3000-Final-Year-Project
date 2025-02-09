@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3977881750984492535}
   - component: {fileID: 8874642401165426323}
   - component: {fileID: -2194294682287204208}
+  - component: {fileID: -2639390802061507361}
   m_Layer: 0
   m_Name: SM_Vodka_1l
   m_TagString: Untagged
@@ -276,3 +277,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodItems:
   - {fileID: 11400000, guid: 71a6717d5c88b9349bff4a4514ed5041, type: 2}
+--- !u!205 &-2639390802061507361
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7925165975944520102}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 5831763767286094801}
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1

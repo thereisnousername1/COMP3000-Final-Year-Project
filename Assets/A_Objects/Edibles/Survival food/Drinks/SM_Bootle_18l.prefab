@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8742361506709585850}
   - component: {fileID: 168495810447887484}
   - component: {fileID: -3923492450443451011}
+  - component: {fileID: 3206925745285753900}
   m_Layer: 0
   m_Name: SM_Bootle_18l
   m_TagString: Untagged
@@ -276,3 +277,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodItems:
   - {fileID: 11400000, guid: 71a6717d5c88b9349bff4a4514ed5041, type: 2}
+--- !u!205 &3206925745285753900
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2193882415313295286}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 745025397088457458}
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.015
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
