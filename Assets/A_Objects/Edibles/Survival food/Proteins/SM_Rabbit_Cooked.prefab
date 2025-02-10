@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 1963273037826765329}
   - component: {fileID: 2402211706258793962}
   - component: {fileID: 7642884702498851312}
-  - component: {fileID: 7612086236568896360}
   - component: {fileID: 5497709515012736546}
+  - component: {fileID: 7612086236568896360}
   m_Layer: 0
   m_Name: SM_Rabbit_Cooked
   m_TagString: Untagged
@@ -263,21 +263,6 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &7612086236568896360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7513819410757258349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  foodItems:
-  - {fileID: 11400000, guid: f99eb47255378f6499e813291df0d9be, type: 2}
-  - {fileID: 11400000, guid: 7cd02393dc5d788449a9da33ab68597e, type: 2}
 --- !u!205 &5497709515012736546
 LODGroup:
   m_ObjectHideFlags: 0
@@ -303,3 +288,21 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7612086236568896360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513819410757258349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItems:
+  - {fileID: 11400000, guid: f99eb47255378f6499e813291df0d9be, type: 2}
+  - {fileID: 11400000, guid: 7cd02393dc5d788449a9da33ab68597e, type: 2}
+  - {fileID: 11400000, guid: 01b8fbb104f0bcf49b56d17552412177, type: 2}
+  - {fileID: 11400000, guid: 6be43ad5ca887d746a2dc0be70bde59f, type: 2}
+  - {fileID: 11400000, guid: 2c7978a25dc855d41987e07cc0235673, type: 2}

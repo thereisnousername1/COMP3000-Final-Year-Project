@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 549009013906468772}
   - component: {fileID: 6823950041996555335}
   - component: {fileID: -4117262990471034222}
+  - component: {fileID: 5672722397094028541}
   m_Layer: 0
   m_Name: SM_Orange_Raw
   m_TagString: Untagged
@@ -287,3 +288,18 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5672722397094028541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4063189005928641321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItems:
+  - {fileID: 11400000, guid: 45e81f8c34bb859418a30c8be7bcdc73, type: 2}
+  - {fileID: 11400000, guid: c27c7f1132a3276498681190b009a33d, type: 2}

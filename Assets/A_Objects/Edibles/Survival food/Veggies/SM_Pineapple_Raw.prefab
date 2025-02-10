@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 675099541730853914}
   - component: {fileID: 6169504882460943613}
   - component: {fileID: -8335327549371834624}
+  - component: {fileID: 3347100875046566206}
   m_Layer: 0
   m_Name: SM_Pineapple_Raw
   m_TagString: Untagged
@@ -287,3 +288,18 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3347100875046566206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5651925227458512688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItems:
+  - {fileID: 11400000, guid: 45e81f8c34bb859418a30c8be7bcdc73, type: 2}
+  - {fileID: 11400000, guid: fdd359017a6679e4492ddcb90b0eb162, type: 2}

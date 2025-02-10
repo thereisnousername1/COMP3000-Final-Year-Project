@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 335330495545592781}
   - component: {fileID: 4040803637393736943}
   - component: {fileID: 4291532172463125299}
-  - component: {fileID: -3757199093132034915}
   - component: {fileID: -7270891180011243007}
+  - component: {fileID: -3757199093132034915}
   m_Layer: 0
   m_Name: SM_Carp_Raw
   m_TagString: Untagged
@@ -263,21 +263,6 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &-3757199093132034915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5497632033372227412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  foodItems:
-  - {fileID: 11400000, guid: f99eb47255378f6499e813291df0d9be, type: 2}
-  - {fileID: 11400000, guid: 7cd02393dc5d788449a9da33ab68597e, type: 2}
 --- !u!205 &-7270891180011243007
 LODGroup:
   m_ObjectHideFlags: 0
@@ -303,3 +288,19 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &-3757199093132034915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5497632033372227412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItems:
+  - {fileID: 11400000, guid: f99eb47255378f6499e813291df0d9be, type: 2}
+  - {fileID: 11400000, guid: 7cd02393dc5d788449a9da33ab68597e, type: 2}
+  - {fileID: 11400000, guid: 93e29a8754144ae45950c553d182288a, type: 2}

@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 7731901619127935060}
   - component: {fileID: 5708309720468296015}
   - component: {fileID: 3224307991167273613}
-  - component: {fileID: 2975768053951812162}
   - component: {fileID: 6613946420488822594}
+  - component: {fileID: 2975768053951812162}
   m_Layer: 0
   m_Name: SM_Bottle_0
   m_TagString: Untagged
@@ -263,20 +263,6 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &2975768053951812162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048223723316711643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  foodItems:
-  - {fileID: 11400000, guid: 71a6717d5c88b9349bff4a4514ed5041, type: 2}
 --- !u!205 &6613946420488822594
 LODGroup:
   m_ObjectHideFlags: 0
@@ -302,3 +288,18 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2975768053951812162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048223723316711643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItems:
+  - {fileID: 11400000, guid: 71a6717d5c88b9349bff4a4514ed5041, type: 2}
+  - {fileID: 11400000, guid: 53e2e3a359abb7644bebd7e6553420b2, type: 2}

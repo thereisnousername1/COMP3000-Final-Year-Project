@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 4572210596467669651}
   - component: {fileID: 1040705214085727307}
   - component: {fileID: 4030646862832857659}
-  - component: {fileID: -7726200416591394719}
   - component: {fileID: -2985052732705538295}
+  - component: {fileID: -7726200416591394719}
   m_Layer: 0
   m_Name: SM_Plastic_Buttles_01
   m_TagString: Untagged
@@ -263,20 +263,6 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &-7726200416591394719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7541554610094311448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  foodItems:
-  - {fileID: 11400000, guid: 71a6717d5c88b9349bff4a4514ed5041, type: 2}
 --- !u!205 &-2985052732705538295
 LODGroup:
   m_ObjectHideFlags: 0
@@ -302,3 +288,18 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &-7726200416591394719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7541554610094311448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItems:
+  - {fileID: 11400000, guid: 71a6717d5c88b9349bff4a4514ed5041, type: 2}
+  - {fileID: 11400000, guid: 53e2e3a359abb7644bebd7e6553420b2, type: 2}

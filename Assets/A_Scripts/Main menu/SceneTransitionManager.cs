@@ -70,7 +70,7 @@ public class SceneTransitionManager : MonoBehaviour
     }
 #endregion
 
-#region Back to Main menu with reset
+#region Back to Main menu with score reset
     public void GoBack()
     {
         // restore data to prevent cheating

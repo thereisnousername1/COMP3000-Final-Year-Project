@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6516096721421917033}
   - component: {fileID: 2207285481716297683}
   - component: {fileID: -7047644527382843328}
+  - component: {fileID: 778138119039606257}
   m_Layer: 0
   m_Name: SM_Pumpkin_Raw
   m_TagString: Untagged
@@ -287,3 +288,18 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &778138119039606257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8111546284203825654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItems:
+  - {fileID: 11400000, guid: 45e81f8c34bb859418a30c8be7bcdc73, type: 2}
+  - {fileID: 11400000, guid: e7b09cf0bf2f45e41b61fb84ece56744, type: 2}

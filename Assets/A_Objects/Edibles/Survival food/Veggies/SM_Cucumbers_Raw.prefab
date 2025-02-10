@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1483998294992137122}
   - component: {fileID: 6938482928589322779}
   - component: {fileID: -2745918928803214467}
+  - component: {fileID: -5697433819075404221}
   m_Layer: 0
   m_Name: SM_Cucumbers_Raw
   m_TagString: Untagged
@@ -287,3 +288,19 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &-5697433819075404221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169796889342529342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItems:
+  - {fileID: 11400000, guid: 45e81f8c34bb859418a30c8be7bcdc73, type: 2}
+  - {fileID: 11400000, guid: 9e28244bca05bd64f894cd079b08bad5, type: 2}
+  - {fileID: 11400000, guid: f481ee2ce98148a4ea705e562f8bd9b1, type: 2}

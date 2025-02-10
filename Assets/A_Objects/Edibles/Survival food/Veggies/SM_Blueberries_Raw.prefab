@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1459663181817101792}
   - component: {fileID: 8852700517921730474}
   - component: {fileID: 7901010900933012315}
+  - component: {fileID: -519846718389191369}
   m_Layer: 0
   m_Name: SM_Blueberries_Raw
   m_TagString: Untagged
@@ -287,3 +288,17 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &-519846718389191369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6210999974077001446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItems:
+  - {fileID: 11400000, guid: 45e81f8c34bb859418a30c8be7bcdc73, type: 2}

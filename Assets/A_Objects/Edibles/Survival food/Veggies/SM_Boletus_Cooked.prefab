@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2714718451994740853}
   - component: {fileID: 8182070625129850055}
   - component: {fileID: -4556203888234516751}
+  - component: {fileID: -1124281594056495947}
   m_Layer: 0
   m_Name: SM_Boletus_Cooked
   m_TagString: Untagged
@@ -287,3 +288,18 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &-1124281594056495947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2378445388249841734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItems:
+  - {fileID: 11400000, guid: 45e81f8c34bb859418a30c8be7bcdc73, type: 2}
+  - {fileID: 11400000, guid: 9e28244bca05bd64f894cd079b08bad5, type: 2}

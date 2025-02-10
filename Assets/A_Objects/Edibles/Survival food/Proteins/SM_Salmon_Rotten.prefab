@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 5282462526146667025}
   - component: {fileID: 7516780735587456005}
   - component: {fileID: 4252357086198081995}
-  - component: {fileID: -2387242934056287413}
   - component: {fileID: -725946418554878306}
+  - component: {fileID: -2387242934056287413}
   m_Layer: 0
   m_Name: SM_Salmon_Rotten
   m_TagString: Untagged
@@ -263,21 +263,6 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &-2387242934056287413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6884156463201172238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  foodItems:
-  - {fileID: 11400000, guid: f99eb47255378f6499e813291df0d9be, type: 2}
-  - {fileID: 11400000, guid: 7cd02393dc5d788449a9da33ab68597e, type: 2}
 --- !u!205 &-725946418554878306
 LODGroup:
   m_ObjectHideFlags: 0
@@ -303,3 +288,19 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &-2387242934056287413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6884156463201172238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItems:
+  - {fileID: 11400000, guid: f99eb47255378f6499e813291df0d9be, type: 2}
+  - {fileID: 11400000, guid: 7cd02393dc5d788449a9da33ab68597e, type: 2}
+  - {fileID: 11400000, guid: 93e29a8754144ae45950c553d182288a, type: 2}

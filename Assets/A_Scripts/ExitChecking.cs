@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,8 +18,11 @@ public class ExitChecking : MonoBehaviour
     public static float FatScore;
     public static float WaterScore;
 
+    List<Attributes> foodItems;
+
     private void OnTriggerEnter(Collider other)
     {
+        /* old logic
         // Check if the object entering is a trolley
         if (other.GetComponent<FoodManager>() != null)
         {
@@ -33,6 +37,37 @@ public class ExitChecking : MonoBehaviour
 
             TotalScore += VeggieScore + CarbonScore + ProteinScore + FatScore + WaterScore;
         }
+        */
+
+        foodItems = other.GetComponent<FoodItemBehaviour>()?.foodItems;
+
+        if (foodItems != null)
+        {
+            foreach (Attributes foodItem in foodItems)
+            {
+                switch (foodItem.foodType)
+                {
+                    case FoodType.Veggie:
+                        VeggieScore += foodItem.value;
+                        break;
+                    case FoodType.Protein:
+                        ProteinScore += foodItem.value;
+                        break;
+                    case FoodType.Carbohydrate:
+                        CarbonScore += foodItem.value;
+                        break;
+                    case FoodType.Fat:
+                        FatScore += foodItem.value;
+                        break;
+                    case FoodType.Water:
+                        WaterScore += foodItem.value;
+                        break;
+                }
+
+                //TotalScore += VeggieScore + CarbonScore + ProteinScore + FatScore + WaterScore;
+            }
+            // Destroy(other.gameObject);
+        }
 
         if (other.gameObject.CompareTag("Player"))
         {
@@ -43,6 +78,7 @@ public class ExitChecking : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        /* old logic
         // Check if the object exiting is a trolley
         if (other.GetComponent<FoodManager>() != null)
         {
@@ -55,6 +91,37 @@ public class ExitChecking : MonoBehaviour
             WaterScore -= other.GetComponent<FoodManager>().waterSlider.value;
 
             TotalScore -= (VeggieScore + CarbonScore + ProteinScore + FatScore + WaterScore);
+        }
+        */
+
+        foodItems = other.GetComponent<FoodItemBehaviour>()?.foodItems;
+
+        if (foodItems != null)
+        {
+            foreach (Attributes foodItem in foodItems)
+            {
+                switch (foodItem.foodType)
+                {
+                    case FoodType.Veggie:
+                        VeggieScore -= foodItem.value;
+                        break;
+                    case FoodType.Protein:
+                        ProteinScore -= foodItem.value;
+                        break;
+                    case FoodType.Carbohydrate:
+                        CarbonScore -= foodItem.value;
+                        break;
+                    case FoodType.Fat:
+                        FatScore -= foodItem.value;
+                        break;
+                    case FoodType.Water:
+                        WaterScore -= foodItem.value;
+                        break;
+                }
+
+                //TotalScore -= (VeggieScore + CarbonScore + ProteinScore + FatScore + WaterScore);
+            }
+            // Destroy(other.gameObject);
         }
     }
 

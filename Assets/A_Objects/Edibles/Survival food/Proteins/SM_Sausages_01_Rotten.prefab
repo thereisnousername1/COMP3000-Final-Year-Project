@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 4015789544068086352}
   - component: {fileID: 8677558337928338725}
   - component: {fileID: 5049110713476576167}
-  - component: {fileID: 9020026554035213558}
   - component: {fileID: 1987307358110736411}
+  - component: {fileID: 9020026554035213558}
   m_Layer: 0
   m_Name: SM_Sausages_01_Rotten
   m_TagString: Untagged
@@ -263,21 +263,6 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &9020026554035213558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4954416816957042473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  foodItems:
-  - {fileID: 11400000, guid: f99eb47255378f6499e813291df0d9be, type: 2}
-  - {fileID: 11400000, guid: 7cd02393dc5d788449a9da33ab68597e, type: 2}
 --- !u!205 &1987307358110736411
 LODGroup:
   m_ObjectHideFlags: 0
@@ -303,3 +288,20 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &9020026554035213558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4954416816957042473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItems:
+  - {fileID: 11400000, guid: f99eb47255378f6499e813291df0d9be, type: 2}
+  - {fileID: 11400000, guid: 7cd02393dc5d788449a9da33ab68597e, type: 2}
+  - {fileID: 11400000, guid: 01b8fbb104f0bcf49b56d17552412177, type: 2}
+  - {fileID: 11400000, guid: 73f8e86260656dc43be6363051841bea, type: 2}

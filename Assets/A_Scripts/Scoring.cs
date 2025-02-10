@@ -26,13 +26,13 @@ public class Scoring : MonoBehaviour
     ///         
     ///     Some other awards? (game art style changing?)
     ///     
-    /// 3. Timer
+    /// 3. Timer(Not a must?)
     /// 
     ///     When a timer runs out of time, it doesn't end the level immediately
     ///     But spawning countless hoomans
     ///     Makes it impossible to escape
     ///     
-    /// 4. Hooman
+    /// 4. Hooman(after level 1)
     /// 
     ///     Defeat them rewards bonus score
     ///     More realistic moving speed based on distance to player?
@@ -50,10 +50,12 @@ public class Scoring : MonoBehaviour
     /// 
     /// </summary>
 
-    public TextMeshProUGUI Value1, Value2, Value3, Value4, Value5, Sum;
+    public TextMeshProUGUI Value1, Value2, Value3, Value4, Value5, Sum, CumulativeScore, Remaining;
     public static float TotalScore;
 
     public float VeggieScore = 0, CarbonScore = 0, ProteinScore = 0, FatScore = 0, WaterScore = 0;
+
+    public static int RemainingWeek;
 
     public void Calculate() {
 
@@ -77,10 +79,56 @@ public class Scoring : MonoBehaviour
         Value4.text = "" + FatScore;
         Value5.text = "" + WaterScore;
 
+        // defeating hooman bonus score
+        // ...
 
+        // collecting mystery parts bonus score
+        // ...
+
+        // fat is the part I want player to avoid
+        // I reward those scores on veggie, carbon, and protein
         // simple logic
-        float sum = (VeggieScore + CarbonScore + ProteinScore) - FatScore;
+        float sum = (VeggieScore + CarbonScore + ProteinScore + WaterScore) - FatScore;
+
+        // for multiple level
         TotalScore += sum;
+
+        /// advancement
+        /// every 100 score of particular part(exclude fat, player died from obese) = 1 more week of food storage
+        /// hand menu shall show the remaining week the food can last
+        /// whether proceeding to next level or not should depends on remaining week s of food left(e.g. >=3 weeks -> proceed to next level)
+        ///
+        /// also not getting enough water = died instantly
+        /// more than or equal to 100 score of water = 1 more week of food storage
+        /// because human can still remains alive for some time with enough water and not enough food
+        /// 
+        /// somewhere in the script
+        /// put a mystery part with a hilarious high score
+        /// e.g. 100000000 for every piece, total 5 piece
+        /// total score >= 500000000 -> Good ending(refer to points above)
+        /// 
+        /// (just a rough idea)
+
+        if (VeggieScore / 100 >= 1)
+            RemainingWeek += (int)Mathf.Round(VeggieScore / 100);
+
+        if (ProteinScore / 100 >= 1)
+            RemainingWeek += (int)Mathf.Round(ProteinScore / 100);
+
+        if (CarbonScore / 100 >= 1)
+            RemainingWeek += (int)Mathf.Round(CarbonScore / 100);
+
+        if (WaterScore / 100 >= 1)
+            RemainingWeek += 1;
+
+        /// gamification part
+        // reconsider the number, think of one bigger than 100
+        // if (FatScore / ? >= 1)
+        //     die from obese -> trigger an ending
+
+        Sum.text = "" + sum;
+        CumulativeScore.text = "" + TotalScore;
+        Remaining.text = "" + RemainingWeek;
     }
 
 }

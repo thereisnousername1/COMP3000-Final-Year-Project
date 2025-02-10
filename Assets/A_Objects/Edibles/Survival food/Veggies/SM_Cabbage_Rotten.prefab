@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2027085299321629502}
   - component: {fileID: 3370025075458025130}
   - component: {fileID: -4915078503316887157}
+  - component: {fileID: -1010431452546295358}
   m_Layer: 0
   m_Name: SM_Cabbage_Rotten
   m_TagString: Untagged
@@ -287,3 +288,19 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &-1010431452546295358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7562101647686136791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItems:
+  - {fileID: 11400000, guid: 45e81f8c34bb859418a30c8be7bcdc73, type: 2}
+  - {fileID: 11400000, guid: 9e28244bca05bd64f894cd079b08bad5, type: 2}
+  - {fileID: 11400000, guid: 3276b1b3a218bf54b9bce5e0185b2732, type: 2}

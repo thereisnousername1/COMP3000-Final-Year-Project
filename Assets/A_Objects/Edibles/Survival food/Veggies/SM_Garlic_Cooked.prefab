@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4987048841776407562}
   - component: {fileID: 2086793342552297378}
   - component: {fileID: 67180705506828970}
+  - component: {fileID: -1937147921484327334}
   m_Layer: 0
   m_Name: SM_Garlic_Cooked
   m_TagString: Untagged
@@ -287,3 +288,17 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &-1937147921484327334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8082620733309835616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf1004a2f13b0648932656ec4b17789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodItems:
+  - {fileID: 11400000, guid: 45e81f8c34bb859418a30c8be7bcdc73, type: 2}
