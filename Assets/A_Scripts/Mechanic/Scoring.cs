@@ -64,7 +64,6 @@ public class Scoring : MonoBehaviour
     void Awake()
     {
         NextLevel.onClick.AddListener(NextLevel_onClick); //subscribe to the onClick event
-
     }
 
     public void Calculate() {
@@ -152,6 +151,7 @@ public class Scoring : MonoBehaviour
 
     private void NextLevel_onClick()
     {
+        /*
         if(NextLevel.GetComponentInChildren<TextMeshProUGUI>().text == "Next Level")
         {
             // go to next level...
@@ -162,6 +162,6 @@ public class Scoring : MonoBehaviour
             // scene...
 
             throw new NotImplementedException();
+        */
     }
-
 }

@@ -14612,6 +14612,10 @@ PrefabInstance:
       propertyPath: menu
       value: 
       objectReference: {fileID: 1852738493}
+    - target: {fileID: 8839380464561949035, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: showUIButton.m_Action.m_Name
+      value: Show UI Button
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -2,6 +2,7 @@ using UnityEngine.InputSystem;
 using UnityEngine;
 using Unity.VisualScripting;
 using UnityEngine.UIElements;
+using TMPro;
 
 /// <summary>
 ///  This script is applied for XR Origin to perform a simple VR pause menu, NOT HAND MENU
@@ -16,6 +17,8 @@ public class GameMenuManager : MonoBehaviour
     public Transform RightHand;
     public GameObject UI;
     public InputActionProperty showUIButton;
+
+    public TextMeshProUGUI RemainingWeekValue;
 
     private Vector3 relativePosition;
 
@@ -66,6 +69,9 @@ public class GameMenuManager : MonoBehaviour
         if (showUIButton.action.WasPerformedThisFrame())
         {
             UI.SetActive(!UI.activeSelf);
+
+            // 10/2/2025
+            RemainingWeekValue.text = "" + Scoring.RemainingWeek;
         }
 
         // Project hand forward vector onto the horizontal plane
