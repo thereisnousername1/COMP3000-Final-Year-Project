@@ -33,7 +33,8 @@ public class GameMenuManager : MonoBehaviour
 
 #region Pause Menu behaviour
         // do only once (if an action was perform in a specific frame)
-        if (showMenuButton.action.WasPerformedThisFrame())
+        // if (showMenuButton.action.WasPerformedThisFrame())
+        if (menu != null && showMenuButton.action.WasPerformedThisFrame())
         {
             menu.SetActive(!menu.activeSelf);
 

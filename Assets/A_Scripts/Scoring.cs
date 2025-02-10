@@ -1,6 +1,8 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using System;
 
 public class Scoring : MonoBehaviour
 {
@@ -56,6 +58,14 @@ public class Scoring : MonoBehaviour
     public float VeggieScore = 0, CarbonScore = 0, ProteinScore = 0, FatScore = 0, WaterScore = 0;
 
     public static int RemainingWeek;
+
+    public Button NextLevel;
+
+    void Awake()
+    {
+        NextLevel.onClick.AddListener(NextLevel_onClick); //subscribe to the onClick event
+
+    }
 
     public void Calculate() {
 
@@ -126,9 +136,32 @@ public class Scoring : MonoBehaviour
         // if (FatScore / ? >= 1)
         //     die from obese -> trigger an ending
 
+        // if (FatScore / 200 >= 1)
+        // die from obese -> trigger an ending
+
         Sum.text = "" + sum;
         CumulativeScore.text = "" + TotalScore;
         Remaining.text = "" + RemainingWeek;
+
+        if (RemainingWeek >= 3)
+        {
+            NextLevel.interactable = true;
+            NextLevel.GetComponentInChildren<TextMeshProUGUI>().text = "Next Level";
+        }
+    }
+
+    private void NextLevel_onClick()
+    {
+        if(NextLevel.GetComponentInChildren<TextMeshProUGUI>().text == "Next Level")
+        {
+            // go to next level...
+            // scene...
+        }
+        else
+            // stay in the same level...
+            // scene...
+
+            throw new NotImplementedException();
     }
 
 }
