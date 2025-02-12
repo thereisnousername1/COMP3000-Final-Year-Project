@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class HoomanVariant1 : HoomanBehavior
 {
-    public FadeScreen fadeScreen;
+    [SerializeField]
+    private FadeScreen fadeScreen;
 
     [SerializeField]
     private string targetScene;
@@ -16,8 +17,6 @@ public class HoomanVariant1 : HoomanBehavior
             StartCoroutine(GoToSceneRoutine());
         }
     }
-
-
 
     private IEnumerator GoToSceneRoutine()
     {

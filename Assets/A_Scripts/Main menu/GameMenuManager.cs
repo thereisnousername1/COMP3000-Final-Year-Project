@@ -3,12 +3,16 @@ using UnityEngine;
 using Unity.VisualScripting;
 using UnityEngine.UIElements;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 ///  This script is applied for XR Origin to perform a simple VR pause menu, NOT HAND MENU
 /// </summary>
 public class GameMenuManager : MonoBehaviour
 {
+#region Variables
+
+    // assigned manually
     public Transform head;
     public float spawnDistance;
     public GameObject menu;
@@ -20,6 +24,11 @@ public class GameMenuManager : MonoBehaviour
 
     public TextMeshProUGUI RemainingWeekValue;
 
+    public float cylinderRadius = 0.15f; // Radius of the wrist/cylinder
+    public float offsetAngle = 0f; // Initial offset along the cylinder
+    public float menuVerticalOffset = 0.1f; // Vertical offset relative to the hand
+    // assigned manually
+
     private Vector3 relativePosition;
 
     Vector3 horizontalForward;
@@ -27,9 +36,7 @@ public class GameMenuManager : MonoBehaviour
     Vector3 menuHorizontalPosition;
     Vector3 menuPosition;
 
-    public float cylinderRadius = 0.15f; // Radius of the wrist/cylinder
-    public float offsetAngle = 0f; // Initial offset along the cylinder
-    public float menuVerticalOffset = 0.1f; // Vertical offset relative to the hand
+#endregion
 
     void Update()
     {
@@ -64,14 +71,20 @@ public class GameMenuManager : MonoBehaviour
             menu.transform.LookAt(new Vector3(head.position.x, menu.transform.position.y, head.position.z));
             menu.transform.forward *= -1;
         }
-#endregion
+        #endregion
 
-        if (showUIButton.action.WasPerformedThisFrame())
+#region Hand Menu behaviour
+        // only available when player is not in the startpage scene
+        if (SceneManager.GetActiveScene().buildIndex != 0)
         {
-            UI.SetActive(!UI.activeSelf);
+            if (showUIButton.action.WasPerformedThisFrame())
+            {
+                UI.SetActive(!UI.activeSelf);
 
-            // 10/2/2025
-            RemainingWeekValue.text = "" + Scoring.RemainingWeek;
+                // 10/2/2025
+                // update the remaining week value, but instead of every frame, only happened when called
+                RemainingWeekValue.text = "" + Scoring.RemainingWeek;
+            }
         }
 
         // Project hand forward vector onto the horizontal plane
@@ -92,5 +105,7 @@ public class GameMenuManager : MonoBehaviour
         // UI.transform.LookAt(new Vector3(UI.transform.position.x, head.position.y, UI.transform.position.z));
 
         UI.transform.rotation = Quaternion.LookRotation(head.position - UI.transform.position, Vector3.up);
+#endregion
+    
     }
 }

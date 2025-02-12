@@ -9,12 +9,17 @@ public class SceneTransitionManager : MonoBehaviour
     //public GameObject spawnPoint;
     //private GameObject player;
 
-    [SerializeField]
-    private string targetScene;
+    // [SerializeField]
+    // private string targetScene;
 
 #region Start
+    // execute every time when scene changed
     private void Start()
     {
+        Debug.Log(SceneManager.GetSceneByBuildIndex(0));
+
+        //if(fadeScreen == null)
+        //    findPlayerFadeScreen();
         StartScene();
     }
 
@@ -38,28 +43,45 @@ public class SceneTransitionManager : MonoBehaviour
     }
 #endregion
 
-#region Single scene (for easier management, alright it is because I am too lazy)
+    /// <summary>
+    /// using string to find a scene
+    /// </summary>
+
+    /* okay I am ready to replace this whole thing
     public void GoToScene()
     {
-        StartCoroutine(GoToSceneRoutine());
+        //StartCoroutine(GoToSceneRoutine());
+
+        StartCoroutine(FadeScreenAnimation());
+        SceneManager.LoadScene(targetScene);
     }
 
+    /*
     private IEnumerator GoToSceneRoutine()
     {
         fadeScreen.gameObject.SetActive(true);
         fadeScreen.FadeOut();
         yield return new WaitForSeconds(fadeScreen.fadeDuration);
 
+        // set FadeScreen to inactive, to prevent blocking ray interactors and UI canvas
+        fadeScreen.gameObject.SetActive(false);
+
         SceneManager.LoadScene(targetScene);
     }
-#endregion
+    */
 
 #region Multiple scene
     public void GoToScene(string scene)
     {
-        StartCoroutine(GoToSceneRoutine(scene));
+        //StartCoroutine(GoToSceneRoutine(scene));
+        StartCoroutine(FadeScreenAnimation());
+        SceneManager.LoadScene(scene);
+
+        // get current scene as debug.log for further development
+        // Debug.Log("Scene number: " + SceneManager.sceneCount);
     }
 
+    /*
     private IEnumerator GoToSceneRoutine(string scene)
     {
         fadeScreen.gameObject.SetActive(true);
@@ -68,6 +90,7 @@ public class SceneTransitionManager : MonoBehaviour
 
         SceneManager.LoadScene(scene);
     }
+    */
 #endregion
 
 #region Back to Main menu with score reset
@@ -80,9 +103,12 @@ public class SceneTransitionManager : MonoBehaviour
         ExitChecking.FatScore = 0;
         ExitChecking.WaterScore = 0;
 
-        StartCoroutine(GoBackRoutine());
+        //StartCoroutine(GoBackRoutine());
+        StartCoroutine(FadeScreenAnimation());
+        SceneManager.LoadScene("startpage");
     }
 
+    /*
     private IEnumerator GoBackRoutine()
     {
         fadeScreen.gameObject.SetActive(true);
@@ -91,6 +117,8 @@ public class SceneTransitionManager : MonoBehaviour
 
         SceneManager.LoadScene("startpage");
     }
+    */
+
 #endregion
 
     /*  pause the game in the GameMenuManager
@@ -104,4 +132,25 @@ public class SceneTransitionManager : MonoBehaviour
     {
         Time.timeScale = 1;
     }
+
+    public IEnumerator FadeScreenAnimation()
+    {
+        fadeScreen.gameObject.SetActive(true);
+        fadeScreen.FadeOut();
+        yield return new WaitForSeconds(fadeScreen.fadeDuration);
+
+        // set FadeScreen to inactive, to prevent blocking ray interactors and UI canvas
+        fadeScreen.gameObject.SetActive(false);
+    }
+
+    /*
+    public void findPlayerFadeScreen()
+    {
+        player = FindAnyObjectByType<GameObject>();
+        if (player == gameObject.CompareTag("Player"))
+        {
+            fadeScreen = player.GetComponentInChildren<FadeScreen>();
+        }
+    }
+    */
 }

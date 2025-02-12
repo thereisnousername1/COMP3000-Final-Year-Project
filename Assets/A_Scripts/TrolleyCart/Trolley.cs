@@ -10,6 +10,12 @@ public class Trolley : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // buggy, it could treat player as children game object
+        //if (!other.CompareTag("Floor"))
+            // try to fix the physics lag
+        //    other.transform.SetParent(this.transform);
+            // indeed it fixed, thanks chatgpt
+
         // Check if the object entering is a food item
         // Attributes foodItem = other.GetComponent<FoodItemBehaviour>()?.foodItem;
 
@@ -29,15 +35,18 @@ public class Trolley : MonoBehaviour
             }
             // Destroy(other.gameObject);
 
+            /// moved to outside
             // try to fix the physics lag
             other.transform.SetParent(this.transform);
             // indeed it fixed, thanks chatgpt
-
+            ///
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        // other.transform.SetParent(null);
+
         // Check if the object exiting is a food item
         foodItems = other.GetComponent<FoodItemBehaviour>()?.foodItems;
 
@@ -48,7 +57,6 @@ public class Trolley : MonoBehaviour
                 // Remove food item from the food manager
                 foodManager.RemoveFood(foodItem);
             }
-
             other.transform.SetParent(null);
         }
     }

@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HoomanBehavior : MonoBehaviour
 {
@@ -18,6 +19,11 @@ public class HoomanBehavior : MonoBehaviour
     // difficulty varies
     public static float hoomanResponseTime;
 
+    // add this to also difficulty setting?
+    public Slider HPslider;
+    [SerializeField]
+    private float HealthPoint = 100;
+
     private Rigidbody rb; // Rigidbody for physics
     private float currentSpeed = 0f;
 
@@ -25,8 +31,10 @@ public class HoomanBehavior : MonoBehaviour
 
     Vector3 directionToPlayer;
     Quaternion targetRotation;
-    float headTiltX;
-    float tempX, tempY, tempZ;
+    float headTiltX, tempX, tempY, tempZ;
+
+    // testing
+    int hitCount = 3;
 
     void Start()
     {
@@ -40,6 +48,12 @@ public class HoomanBehavior : MonoBehaviour
                 player = playerObj.transform;
             }
         }
+
+        if (HPslider != null)
+            HPslider.transform.rotation = new Quaternion(HPslider.transform.rotation.x,
+                                                         HPslider.transform.rotation.y * -1,
+                                                         HPslider.transform.rotation.z,
+                                                         HPslider.transform.rotation.w);
     }
 
     void FixedUpdate()
@@ -48,6 +62,8 @@ public class HoomanBehavior : MonoBehaviour
         if (isKnockedBack) return; // ignore original behaviour if it is already hitted
 
         if (player == null) return;
+
+        if (HPslider != null) HPslider.value = HealthPoint;
 
 #region Head spinning logic
         // Spin their head towards player
@@ -111,6 +127,20 @@ public class HoomanBehavior : MonoBehaviour
         isKnockedBack = true;
 
         rb.linearVelocity = hitDirection.normalized * hitForce;
+
+        // HealthPoint -= hitForce;
+
+        if (HealthPoint <= 0)
+        {
+            // maybe some visual effect?
+            //Destroy(this);
+        }
+
+        if (hitCount == 0)
+        {
+            Destroy(this.gameObject);
+        }
+
     }
     public void OnCollisionEnter(Collision collision)
     {
@@ -146,5 +176,6 @@ public class HoomanBehavior : MonoBehaviour
         // return to normal
         isKnockedBack = false;
         rb.linearVelocity = Vector3.zero;
+        hitCount--;
     }
 }

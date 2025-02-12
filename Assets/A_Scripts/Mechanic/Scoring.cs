@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Scoring : MonoBehaviour
 {
@@ -55,11 +56,15 @@ public class Scoring : MonoBehaviour
     public TextMeshProUGUI Value1, Value2, Value3, Value4, Value5, Sum, CumulativeScore, Remaining;
     public static float TotalScore;
 
-    public float VeggieScore = 0, CarbonScore = 0, ProteinScore = 0, FatScore = 0, WaterScore = 0;
+    private float VeggieScore = 0, CarbonScore = 0, ProteinScore = 0, FatScore = 0, WaterScore = 0, tempScore = 0, sum = 0;
 
     public static int RemainingWeek;
 
+    public static int LevelToGo;
     public Button NextLevel;
+
+    [SerializeField]
+    private FadeScreen fadeScreen;
 
     void Awake()
     {
@@ -68,19 +73,49 @@ public class Scoring : MonoBehaviour
 
     public void Calculate() {
 
+        Debug.Log("Current scene number was " + ExitChecking.CurrentGameLevel);
+        // get previous level index
+        LevelToGo = ExitChecking.CurrentGameLevel;
+
+        // restore the local variables
+        VeggieScore = 0;
+        CarbonScore = 0;
+        ProteinScore = 0;
+        FatScore = 0;
+        WaterScore = 0;
+        tempScore = 0;
+        sum = 0;
+
+        RemainingWeek = 0;
+
         // get data from outside
         VeggieScore = ExitChecking.VeggieScore;
         CarbonScore = ExitChecking.CarbonScore;
         ProteinScore = ExitChecking.ProteinScore;
         FatScore = ExitChecking.FatScore;
         WaterScore = ExitChecking.WaterScore;
-        
+
+        /// Thinking time:
+        /// Remaining week begin with 0
+        /// that's why player is getting food from supermarket
+        /// 
+        /// In the checkout scene, remaining week++ -> shown in hand menu(GameMenuManager.cs)
+        /// Then the number in hand menu represents the remaining food from last level can lasts for ? week(s)
+        /// If so, hand menu number = last checkout scene remaining week value
+        /// or
+        /// make it useful?
+        /// implement the current nutrition value(in week? in score?) of the food player collected?
+        /// or
+        /// use it to display score?
+
         // restore the parameters
         ExitChecking.VeggieScore = 0;
         ExitChecking.CarbonScore = 0;
         ExitChecking.ProteinScore = 0;
         ExitChecking.FatScore = 0;
         ExitChecking.WaterScore = 0;
+
+        ExitChecking.CurrentGameLevel = 0;
 
         Value1.text = "" + VeggieScore;
         Value2.text = "" + CarbonScore;
@@ -97,7 +132,7 @@ public class Scoring : MonoBehaviour
         // fat is the part I want player to avoid
         // I reward those scores on veggie, carbon, and protein
         // simple logic
-        float sum = (VeggieScore + CarbonScore + ProteinScore + WaterScore) - FatScore;
+        sum = (VeggieScore + CarbonScore + ProteinScore + WaterScore) - FatScore;
 
         // for multiple level
         TotalScore += sum;
@@ -110,6 +145,7 @@ public class Scoring : MonoBehaviour
         /// also not getting enough water = died instantly
         /// more than or equal to 100 score of water = 1 more week of food storage
         /// because human can still remains alive for some time with enough water and not enough food
+        /// but human cannot live with just water for long
         /// 
         /// somewhere in the script
         /// put a mystery part with a hilarious high score
@@ -118,17 +154,33 @@ public class Scoring : MonoBehaviour
         /// 
         /// (just a rough idea)
 
+        // regular food logic
         if (VeggieScore / 100 >= 1)
             RemainingWeek += (int)Mathf.Round(VeggieScore / 100);
+        else
+            tempScore += VeggieScore;
 
         if (ProteinScore / 100 >= 1)
             RemainingWeek += (int)Mathf.Round(ProteinScore / 100);
+        else
+            tempScore += ProteinScore;
 
         if (CarbonScore / 100 >= 1)
             RemainingWeek += (int)Mathf.Round(CarbonScore / 100);
+        else
+            tempScore += CarbonScore;
 
+        if (tempScore / 100 >= 1)
+            RemainingWeek += (int)Mathf.Round(tempScore / 100);
+
+        // water logic
         if (WaterScore / 100 >= 1)
-            RemainingWeek += 1;
+        {
+            if ((VeggieScore + ProteinScore + CarbonScore) / 100 < 1)
+                RemainingWeek += 1;
+            else
+                RemainingWeek += (int)Mathf.Round(WaterScore / 100);
+        }
 
         /// gamification part
         // reconsider the number, think of one bigger than 100
@@ -144,24 +196,48 @@ public class Scoring : MonoBehaviour
 
         if (RemainingWeek >= 3)
         {
+            LevelToGo++;
             NextLevel.interactable = true;
             NextLevel.GetComponentInChildren<TextMeshProUGUI>().text = "Next Level";
+        }
+        else
+        {
+            NextLevel.interactable = true;
+            NextLevel.GetComponentInChildren<TextMeshProUGUI>().text = "Go back and grab more";
         }
     }
 
     private void NextLevel_onClick()
     {
         /*
-        if(NextLevel.GetComponentInChildren<TextMeshProUGUI>().text == "Next Level")
+        if (NextLevel.GetComponentInChildren<TextMeshProUGUI>().text == "Next Level")
         {
             // go to next level...
             // scene...
+            SceneTransitionManager.FadeScreenAnimation();
+            SceneManager.LoadScene(LevelToGo);
         }
         else
+        {
             // stay in the same level...
             // scene...
 
             throw new NotImplementedException();
+        }
         */
+
+        //SceneTransitionManager.FadeScreenAnimation();
+        SceneManager.LoadScene(LevelToGo);
+        LevelToGo = 0;
+    }
+
+    IEnumerator FadeScreenAnimation()
+    {
+        fadeScreen.gameObject.SetActive(true);
+        fadeScreen.FadeOut();
+        yield return new WaitForSeconds(fadeScreen.fadeDuration);
+
+        // set FadeScreen to inactive, to prevent blocking ray interactors and UI canvas
+        fadeScreen.gameObject.SetActive(false);
     }
 }

@@ -15,45 +15,86 @@ public class HoomanSpawner : MonoBehaviour
 
     private float spawnTimer = 0f;
     private bool isSpawning = false; // Prevent multiple coroutines
+
+    int currentHoomanCount, spawnCount, count;
+    Vector3 tempPos;
+    GameObject HoomanClone;
+
+    [SerializeField]
+    private bool countlessSpawning = false;
+
+    void start()
+    {
+        // reduce workload
+        tempPos = new Vector3(spawnPoint.position.x,
+                              spawnPoint.position.y + 1f,
+                              spawnPoint.position.z);
+
+        spawnPoint = this.gameObject.transform;
+        count = 0;
+    }
+
     void Update()
     {
         spawnTimer += Time.deltaTime;
 
-        if (spawnTimer >= preparationTime && !isSpawning)
+        if (spawnTimer >= preparationTime)
         {
             spawnTimer = 0f;
-            StartCoroutine(SpawnHoomanRoutine());
+            if (count < maxHoomanCount)
+            {
+                if (!isSpawning)
+                {
+                    StartCoroutine(SpawnHoomanRoutine());
+                }
+            }
+
+            if (countlessSpawning)
+            {
+                StartCoroutine(SpawnHoomanRoutine());
+            }
         }
     }
 
+    /* this one refill when hooman is not enough
     IEnumerator SpawnHoomanRoutine()
     {
         isSpawning = true;
 
-        // Checking amount of object(hooman)
-        int currentHoomanCount = GameObject.FindGameObjectsWithTag("Hooman").Length;
+        // Checking amount of object(hooman) in current scene
+        currentHoomanCount = GameObject.FindGameObjectsWithTag("Hooman").Length;
+        // but seemingly won't work when there are multiple spawn point
 
         if (currentHoomanCount < maxHoomanCount)
         {
             // Spawn enough hooman
-            int spawnCount = maxHoomanCount - currentHoomanCount;
+            spawnCount = maxHoomanCount - currentHoomanCount;
             for (int i = 0; i < spawnCount; i++)
             {
-                Vector3 tempPos = new Vector3(spawnPoint.position.x,
-                                              spawnPoint.position.y + 1f,
-                                              spawnPoint.position.z);
-                SpawnHooman(tempPos);   // every copy of the prefab instantiate, they receive a position for to spawn
+                SpawnHooman();   // every copy of the prefab instantiate, they receive a position for to spawn
                 yield return new WaitForSeconds(spawnDelay);
             }
         }
 
         isSpawning = false;
     }
+    rewrite */
 
-    void SpawnHooman(Vector3 tempPos)
+    IEnumerator SpawnHoomanRoutine()
+    {
+        isSpawning = true;
+
+        SpawnHooman();   // every copy of the prefab instantiate, they receive a position for to spawn
+        yield return new WaitForSeconds(spawnDelay);
+
+        isSpawning = false;
+    }
+
+    void SpawnHooman()
     {
         // Instantiate(hoomanPrefab, spawnPoint.position, Quaternion.identity);
-        GameObject HoomanClone = Instantiate(hoomanPrefab, tempPos, Quaternion.identity);
+        HoomanClone = Instantiate(hoomanPrefab, tempPos, Quaternion.identity);
         Physics.IgnoreCollision(HoomanClone.GetComponentInChildren<Collider>(), GetComponent<Collider>());
+        count++;
     }
 }

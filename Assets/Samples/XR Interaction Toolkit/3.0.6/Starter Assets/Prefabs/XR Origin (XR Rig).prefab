@@ -379,7 +379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1680501587}
   m_Layer: 0
-  m_Name: Camera Offset
+  m_Name: Camera Offset (Restart the vr device if pivot drift again)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

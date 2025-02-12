@@ -10,7 +10,8 @@ public class ExitChecking : MonoBehaviour
 
     public FadeScreen fadeScreen;
 
-    public float TotalScore;
+    // handled by scoring.cs instead
+    // public float TotalScore;
 
     public static float VeggieScore;
     public static float CarbonScore;
@@ -19,6 +20,8 @@ public class ExitChecking : MonoBehaviour
     public static float WaterScore;
 
     List<Attributes> foodItems;
+
+    public static int CurrentGameLevel;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -72,7 +75,14 @@ public class ExitChecking : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             // end current level and do score calculation, and then proceed to next level I guess
+            // GoToCheckoutScene();
+
+            CurrentGameLevel = SceneManager.GetActiveScene().buildIndex;
+            //SceneTransitionManager.FadeScreenAnimation();
+            //SceneManager.LoadScene("checkout");
+
             GoToCheckoutScene();
+            Resources.UnloadUnusedAssets();
         }
     }
 
@@ -136,6 +146,8 @@ public class ExitChecking : MonoBehaviour
         fadeScreen.FadeOut();
         yield return new WaitForSeconds(fadeScreen.fadeDuration);
 
+        // set FadeScreen to inactive, to prevent blocking ray interactors and UI canvas
+        fadeScreen.gameObject.SetActive(false);
         SceneManager.LoadScene("checkout");
     }
 }
