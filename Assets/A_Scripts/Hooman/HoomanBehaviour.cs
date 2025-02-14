@@ -120,6 +120,7 @@ public class HoomanBehavior : MonoBehaviour
         rb.linearVelocity = moveDirection * currentSpeed;
     }
 
+#region Get Hurt logic
     public void GetHit(Vector3 hitDirection, float hitForce)
     {
         if (isKnockedBack) return; // ignore original behaviour if it is already hitted
@@ -142,6 +143,9 @@ public class HoomanBehavior : MonoBehaviour
         }
 
     }
+#endregion
+
+#region Get Up logic
     public void OnCollisionEnter(Collision collision)
     {
         /*
@@ -178,4 +182,5 @@ public class HoomanBehavior : MonoBehaviour
         rb.linearVelocity = Vector3.zero;
         hitCount--;
     }
+#endregion
 }

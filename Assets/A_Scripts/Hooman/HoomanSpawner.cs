@@ -23,14 +23,14 @@ public class HoomanSpawner : MonoBehaviour
     [SerializeField]
     private bool countlessSpawning = false;
 
-    void start()
+    void Start()
     {
         // reduce workload
+        spawnPoint = this.gameObject.transform;
         tempPos = new Vector3(spawnPoint.position.x,
                               spawnPoint.position.y + 1f,
                               spawnPoint.position.z);
 
-        spawnPoint = this.gameObject.transform;
         count = 0;
     }
 

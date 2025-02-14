@@ -156,22 +156,26 @@ public class Scoring : MonoBehaviour
 
         // regular food logic
         if (VeggieScore / 100 >= 1)
-            RemainingWeek += (int)Mathf.Round(VeggieScore / 100);
+            //RemainingWeek += (int)Mathf.Round(VeggieScore / 100);
+            RemainingWeek += Mathf.FloorToInt(VeggieScore / 100);
         else
             tempScore += VeggieScore;
 
         if (ProteinScore / 100 >= 1)
-            RemainingWeek += (int)Mathf.Round(ProteinScore / 100);
+            //RemainingWeek += (int)Mathf.Round(ProteinScore / 100);
+            RemainingWeek += Mathf.FloorToInt(ProteinScore / 100);
         else
             tempScore += ProteinScore;
 
         if (CarbonScore / 100 >= 1)
-            RemainingWeek += (int)Mathf.Round(CarbonScore / 100);
+            //RemainingWeek += (int)Mathf.Round(CarbonScore / 100);
+            RemainingWeek += Mathf.FloorToInt(CarbonScore / 100);
         else
             tempScore += CarbonScore;
 
         if (tempScore / 100 >= 1)
-            RemainingWeek += (int)Mathf.Round(tempScore / 100);
+            //RemainingWeek += (int)Mathf.Round(tempScore / 100);
+            RemainingWeek += Mathf.FloorToInt(tempScore / 100);
 
         // water logic
         if (WaterScore / 100 >= 1)
@@ -179,7 +183,8 @@ public class Scoring : MonoBehaviour
             if ((VeggieScore + ProteinScore + CarbonScore) / 100 < 1)
                 RemainingWeek += 1;
             else
-                RemainingWeek += (int)Mathf.Round(WaterScore / 100);
+                //RemainingWeek += (int)Mathf.Round(WaterScore / 100);
+                RemainingWeek += Mathf.FloorToInt(WaterScore / 100);
         }
 
         /// gamification part
