@@ -50,7 +50,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: ac47c4d22e128d7499f13da1e8914db5, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ac47c4d22e128d7499f13da1e8914db5, type: 3}
+      propertyPath: m_PreserveUVs
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: ac47c4d22e128d7499f13da1e8914db5, type: 3}
       propertyPath: m_Materials.Array.size
@@ -63,6 +67,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ac47c4d22e128d7499f13da1e8914db5, type: 3}
       propertyPath: m_Name
       value: SM_Pizza
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac47c4d22e128d7499f13da1e8914db5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
