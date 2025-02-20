@@ -6,5 +6,5 @@ public class FoodItemBehaviour : MonoBehaviour
 {
     //public Attributes foodItem; // Reference to the corresponding ScriptableObject
     
-    public List<Attributes> foodItems; // Reference to the corresponding ScriptableObject
+    public List<Attribute> foodItems; // Reference to the corresponding ScriptableObject
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Trolley : MonoBehaviour
 {
     public FoodManager foodManager;
-    List<Attributes> foodItems;
+    List<Attribute> foodItems;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -28,7 +28,7 @@ public class Trolley : MonoBehaviour
         
         if (foodItems != null)
         {
-            foreach (Attributes foodItem in foodItems)
+            foreach (Attribute foodItem in foodItems)
             {
                 // Add food item to the food manager
                 foodManager.CollectFood(foodItem);
@@ -52,7 +52,7 @@ public class Trolley : MonoBehaviour
 
         if (foodItems != null)
         {
-            foreach (Attributes foodItem in foodItems)
+            foreach (Attribute foodItem in foodItems)
             {
                 // Remove food item from the food manager
                 foodManager.RemoveFood(foodItem);

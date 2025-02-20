@@ -17,8 +17,23 @@ public class Triggering : MonoBehaviour
     // So you need a ong yee yee ass screen
     // Ya
 
-    public List<PlayableDirector> Timeline;
+    public List<GameObject> scenes;
+    public List<PlayableDirector> Timelines;
     // public PlayableDirector Timeline;
+    // public List<Cutscene> cutscenes;
+
+    void Start()
+    {
+        foreach (GameObject scene in scenes)
+        {
+            Timelines.Add(scene.GetComponent<PlayableDirector>());
+        }
+
+        foreach (PlayableDirector timeline in Timelines)
+        {
+            timeline.Play();
+        }
+    }
 
     /*
     public void play()
@@ -31,4 +46,33 @@ public class Triggering : MonoBehaviour
         Timeline.Stop();
     }
     */
+
+    public void play()
+    {
+        // somehow find the specific index of the scene, set active and then play
+        // Timeline.Play();
+    }
+
+    public void stop()
+    {
+        // somehow find the specific index of the scene, stop and then deactivate
+        // Timeline.Stop();
+    }
 }
+
+/*
+// geez why am I being so smart using a far more complicated method while I can simply find opponent in an game object
+// geezus
+[CreateAssetMenu(fileName = "Cutscene", menuName = "Scriptable Objects/Cutscene")]
+public class Cutscene : ScriptableObject
+{
+    public PlayableDirector Timeline;
+    public GameObject scene;
+
+    public void Active()
+    {
+        scene.SetActive(true);
+        Timeline.Play();
+    }
+}
+*/

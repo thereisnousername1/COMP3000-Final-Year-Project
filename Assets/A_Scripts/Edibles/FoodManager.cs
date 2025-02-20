@@ -17,7 +17,7 @@ public class FoodManager : MonoBehaviour
     private float waterAmount;
 
     // Method to add food item
-    public void CollectFood(Attributes food)
+    public void CollectFood(Attribute food)
     {
         switch (food.foodType)
         {
@@ -45,7 +45,7 @@ public class FoodManager : MonoBehaviour
     }
 
     // Method to remove food item
-    public void RemoveFood(Attributes food)
+    public void RemoveFood(Attribute food)
     {
         switch (food.foodType)
         {

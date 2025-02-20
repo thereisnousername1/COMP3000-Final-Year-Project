@@ -19,7 +19,7 @@ public class ExitChecking : MonoBehaviour
     public static float FatScore;
     public static float WaterScore;
 
-    List<Attributes> foodItems;
+    List<Attribute> foodItems;
 
     public static int CurrentGameLevel;
 
@@ -46,7 +46,7 @@ public class ExitChecking : MonoBehaviour
 
         if (foodItems != null)
         {
-            foreach (Attributes foodItem in foodItems)
+            foreach (Attribute foodItem in foodItems)
             {
                 switch (foodItem.foodType)
                 {
@@ -108,7 +108,7 @@ public class ExitChecking : MonoBehaviour
 
         if (foodItems != null)
         {
-            foreach (Attributes foodItem in foodItems)
+            foreach (Attribute foodItem in foodItems)
             {
                 switch (foodItem.foodType)
                 {
