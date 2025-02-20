@@ -65,6 +65,7 @@ Material:
     - _Scale: 1.07
     - _SrcBlend: 5
     - _Surface: 1
+    - _Transparency: 1
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0

@@ -29,10 +29,12 @@ public class Triggering : MonoBehaviour
             Timelines.Add(scene.GetComponent<PlayableDirector>());
         }
 
+        /*
         foreach (PlayableDirector timeline in Timelines)
         {
             timeline.Play();
         }
+        */
     }
 
     /*
@@ -51,6 +53,10 @@ public class Triggering : MonoBehaviour
     {
         // somehow find the specific index of the scene, set active and then play
         // Timeline.Play();
+        foreach (PlayableDirector timeline in Timelines)
+        {
+            timeline.Play();
+        }
     }
 
     public void stop()
