@@ -847,7 +847,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2136384136}
         m_TargetAssemblyTypeName: SceneTransitionManager, Assembly-CSharp
-        m_MethodName: GoToScene
+        m_MethodName: SetTargetScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -855,6 +855,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Level 1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2136384136}
+        m_TargetAssemblyTypeName: SceneTransitionManager, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Transition
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &398971824
@@ -2161,7 +2173,7 @@ PrefabInstance:
       objectReference: {fileID: 1790088314}
     - target: {fileID: 5558557802191274558, guid: 9ff7dfd2d64f55b4680222f72bf43378, type: 3}
       propertyPath: targetScene
-      value: Level 1
+      value: Transition
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

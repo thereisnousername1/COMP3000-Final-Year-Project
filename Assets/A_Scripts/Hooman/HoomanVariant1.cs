@@ -26,6 +26,9 @@ public class HoomanVariant1 : HoomanBehavior
         fadeScreen.FadeOut();
         yield return new WaitForSeconds(fadeScreen.fadeDuration);
 
+        // if (targetScene != "Debug")
+        if (targetScene == "Transition")
+            SceneTransitionManager.SetTargetScene("Level 1");
         SceneManager.LoadScene(targetScene);
     }
 }

@@ -11,12 +11,13 @@ public class SceneTransitionManager : MonoBehaviour
 
     // [SerializeField]
     // private string targetScene;
+    public static string TargetScene;
 
 #region Start
     // execute every time when scene changed
     private void Start()
     {
-        Debug.Log(SceneManager.GetSceneByBuildIndex(0));
+        // Debug.Log(SceneManager.GetSceneByBuildIndex(0));
 
         //if(fadeScreen == null)
         //    findPlayerFadeScreen();
@@ -103,6 +104,9 @@ public class SceneTransitionManager : MonoBehaviour
         ExitChecking.FatScore = 0;
         ExitChecking.WaterScore = 0;
 
+        // restore TargetScene back to null
+        TargetScene = null;
+
         //StartCoroutine(GoBackRoutine());
         StartCoroutine(FadeScreenAnimation());
         SceneManager.LoadScene("startpage");
@@ -119,7 +123,7 @@ public class SceneTransitionManager : MonoBehaviour
     }
     */
 
-#endregion
+    #endregion
 
     /*  pause the game in the GameMenuManager
     public void PauseGame()
@@ -128,6 +132,10 @@ public class SceneTransitionManager : MonoBehaviour
     }
     */
 
+    public static void SetTargetScene(string name)
+    {
+        TargetScene = name;
+    }
     public void ResumeGame()
     {
         Time.timeScale = 1;

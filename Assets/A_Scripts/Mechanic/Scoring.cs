@@ -232,6 +232,7 @@ public class Scoring : MonoBehaviour
         */
 
         //SceneTransitionManager.FadeScreenAnimation();
+        FadeScreenAnimation();
         SceneManager.LoadScene(LevelToGo);
         LevelToGo = 0;
     }

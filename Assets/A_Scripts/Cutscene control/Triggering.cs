@@ -1,9 +1,26 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 /// <summary>
 /// This is a class for multiple cutscenes management
+/// 
+/// Transition is a scene for transit(wow you don't say)
+/// it store/get the next scene, which is where the actual game take place
+/// it allows player to view/review seen/ unseen cutscene(very beautiful cutscene made by me, geez you should thank me)
+/// 
+/// Depending on the SceneTransitionManger.TargetScene(static)
+/// the woosh pillar(it performs magic by making player vanish so I call it woosh pillar)
+/// add a listener to the button on top of it, so that player can travel to the desired scene(SceneTransitionManger.TargetScene)
+/// also the text change depends on the SceneTransitionManger.TargetScene
+/// 
+/// geez you should really thank me
 /// </summary>
 public class Triggering : MonoBehaviour
 {
@@ -17,10 +34,17 @@ public class Triggering : MonoBehaviour
     // So you need a ong yee yee ass screen
     // Ya
 
+    // this way I can still explore the index by their gameobject sequence, smart way to use static (or just regular way?)
     public List<GameObject> scenes;
     public List<PlayableDirector> Timelines;
-    // public PlayableDirector Timeline;
-    // public List<Cutscene> cutscenes;
+    public PlayableDirector CurrentTimeline;
+    public static int Index = 0;
+    public string NextScenetoGo = null;
+
+    public GameObject WooshPillar;
+
+    [SerializeField]
+    private FadeScreen fadeScreen;
 
     void Start()
     {
@@ -29,26 +53,20 @@ public class Triggering : MonoBehaviour
             Timelines.Add(scene.GetComponent<PlayableDirector>());
         }
 
-        /*
-        foreach (PlayableDirector timeline in Timelines)
-        {
-            timeline.Play();
-        }
-        */
+        CurrentTimeline = Timelines[Index];
+
+        // when the player just start a new game in the startpage
+        // by default play the first timeline (defined in the EventSystem)
+        if (SceneTransitionManager.TargetScene == "Level 1")
+            //...
+            CurrentTimeline.Play();
+        // Debug.Log(WooshPillar.GetComponentInChildren<XRSimpleInteractable>().selectEntered.ToString());
+        NextScenetoGo = SceneTransitionManager.TargetScene;
+        WooshPillar.GetComponentInChildren<XRSimpleInteractable>().selectEntered.AddListener(WooshPillar_Button_Selected);
+        WooshPillar.GetComponentInChildren<Text>().text = "Go to " + NextScenetoGo;
     }
 
     /*
-    public void play()
-    {
-        Timeline.Play();
-    }
-
-    public void stop()
-    {
-        Timeline.Stop();
-    }
-    */
-
     public void play()
     {
         // somehow find the specific index of the scene, set active and then play
@@ -64,10 +82,70 @@ public class Triggering : MonoBehaviour
         // somehow find the specific index of the scene, stop and then deactivate
         // Timeline.Stop();
     }
+    */
+
+    // receive data from outside (i.e. scoring.cs, it decide what cutscene to play, just in case)
+    public static void InputCutsceneIndex(int index)
+    {
+        Index = index;
+    }
+
+#region Scene Selector and Woosh Pillar logic
+
+    // name in here equals to the scene name
+    public void InputDesiredScene(string name)
+    {
+        NextScenetoGo = name;
+        WooshPillar.GetComponentInChildren<Text>().text = "Go to " + NextScenetoGo;
+    }
+
+    private void WooshPillar_Button_Selected(SelectEnterEventArgs arg0)
+    {
+        FadeScreenAnimation();
+        if (NextScenetoGo != null)
+        {
+            SceneManager.LoadScene(NextScenetoGo);
+            NextScenetoGo = null;
+        }
+        else
+            Debug.Log("No target scene selected!");
+    }
+
+    IEnumerator FadeScreenAnimation()
+    {
+        fadeScreen.gameObject.SetActive(true);
+        fadeScreen.FadeOut();
+        yield return new WaitForSeconds(fadeScreen.fadeDuration);
+
+        // set FadeScreen to inactive, to prevent blocking ray interactors and UI canvas
+        fadeScreen.gameObject.SetActive(false);
+
+    }
+#endregion
+
+#region Actions for Spatial video Player (Ya it is a genius idea, I hope one day I can recreate this in apple vision pro, watching real life spatial video)
+    // The following functions can be called only in the Transition scene
+    public void play()
+    {
+        // somehow find the specific index of the scene, set active and then play
+        CurrentTimeline.Play();
+    }
+
+    public void pause()
+    {
+        CurrentTimeline.Pause();
+    }
+
+    public void stop()
+    {
+        // somehow find the specific index of the scene, stop and then deactivate
+        CurrentTimeline.Stop();
+    }
+#endregion
 }
 
-/*
-// geez why am I being so smart using a far more complicated method while I can simply find opponent in an game object
+/* geez
+//      why am I being so smart using a far more complicated method while I can simply find opponent in an game object
 // geezus
 [CreateAssetMenu(fileName = "Cutscene", menuName = "Scriptable Objects/Cutscene")]
 public class Cutscene : ScriptableObject
