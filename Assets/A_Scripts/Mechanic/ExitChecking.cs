@@ -81,7 +81,8 @@ public class ExitChecking : MonoBehaviour
             //SceneTransitionManager.FadeScreenAnimation();
             //SceneManager.LoadScene("checkout");
 
-            GoToCheckoutScene();
+            Scoring.End = false;
+            StartCoroutine(GoToCheckoutSceneRoutine());
             Resources.UnloadUnusedAssets();
         }
     }
@@ -133,11 +134,6 @@ public class ExitChecking : MonoBehaviour
             }
             // Destroy(other.gameObject);
         }
-    }
-
-    void GoToCheckoutScene()
-    {
-        StartCoroutine(GoToCheckoutSceneRoutine());
     }
 
     private IEnumerator GoToCheckoutSceneRoutine()

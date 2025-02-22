@@ -55,15 +55,27 @@ public class Triggering : MonoBehaviour
 
         CurrentTimeline = Timelines[Index];
 
-        // when the player just start a new game in the startpage
-        // by default play the first timeline (defined in the EventSystem)
-        if (SceneTransitionManager.TargetScene == "Level 1")
+        // when the player just start a new game in the startpage or comes from other level(with TargetScene)
+        // by default play the timeline (defined in the EventSystem)
+        if (SceneTransitionManager.TargetScene != null)
             //...
             CurrentTimeline.Play();
         // Debug.Log(WooshPillar.GetComponentInChildren<XRSimpleInteractable>().selectEntered.ToString());
-        NextScenetoGo = SceneTransitionManager.TargetScene;
+
+        // Scoring.End reset in ExitChecking and goBack function
+        if (Scoring.End != true)
+        {
+            // when player start a new game in startpage scene, at this point the SceneTransitionManager.TargetScene should be != null
+            NextScenetoGo = SceneTransitionManager.TargetScene;
+            WooshPillar.GetComponentInChildren<Text>().text = "Go to " + NextScenetoGo;
+        }
+        else
+        {
+            NextScenetoGo = null;
+            WooshPillar.GetComponentInChildren<Text>().text = "Geez, you can't play this game";
+        }
+            
         WooshPillar.GetComponentInChildren<XRSimpleInteractable>().selectEntered.AddListener(WooshPillar_Button_Selected);
-        WooshPillar.GetComponentInChildren<Text>().text = "Go to " + NextScenetoGo;
     }
 
     /*
@@ -84,9 +96,18 @@ public class Triggering : MonoBehaviour
     }
     */
 
-    // receive data from outside (i.e. scoring.cs, it decide what cutscene to play, just in case)
+    // receive data from outside (i.e. scoring.cs, it decide what cutscene to play in script, just in case)
     public static void InputCutsceneIndex(int index)
     {
+        /// Introduction
+        /// 0: Intro
+        /// 
+        /// Bad Endings
+        /// 1: Died from starvation
+        /// 2: Died from obesity
+        /// 
+        /// Good Endings
+        /// 
         Index = index;
     }
 
@@ -101,9 +122,9 @@ public class Triggering : MonoBehaviour
 
     private void WooshPillar_Button_Selected(SelectEnterEventArgs arg0)
     {
-        FadeScreenAnimation();
         if (NextScenetoGo != null)
         {
+            StartCoroutine(FadeScreenAnimation());
             SceneManager.LoadScene(NextScenetoGo);
             NextScenetoGo = null;
         }
@@ -128,6 +149,7 @@ public class Triggering : MonoBehaviour
     public void play()
     {
         // somehow find the specific index of the scene, set active and then play
+        CurrentTimeline = Timelines[Index];
         CurrentTimeline.Play();
     }
 
@@ -138,7 +160,7 @@ public class Triggering : MonoBehaviour
 
     public void stop()
     {
-        // somehow find the specific index of the scene, stop and then deactivate
+        // stop and then deactivate
         CurrentTimeline.Stop();
     }
 #endregion

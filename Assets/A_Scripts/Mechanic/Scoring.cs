@@ -35,7 +35,7 @@ public class Scoring : MonoBehaviour
     ///     But spawning countless hoomans
     ///     Makes it impossible to escape
     ///     
-    /// 4. Hooman(after level 1)
+    /// 4. Hooman(appears after level 1)
     /// 
     ///     Defeat them rewards bonus score
     ///     More realistic moving speed based on distance to player?
@@ -59,6 +59,10 @@ public class Scoring : MonoBehaviour
     private float VeggieScore = 0, CarbonScore = 0, ProteinScore = 0, FatScore = 0, WaterScore = 0, tempScore = 0, sum = 0;
 
     public static int RemainingWeek;
+
+    public static int FailCounter;
+
+    public static bool End = false;
 
     public static int LevelToGo;
     public Button NextLevel;
@@ -202,13 +206,29 @@ public class Scoring : MonoBehaviour
         if (RemainingWeek >= 3)
         {
             LevelToGo++;
+            FailCounter = 0;
             NextLevel.interactable = true;
             NextLevel.GetComponentInChildren<TextMeshProUGUI>().text = "Next Level";
         }
+
+        if (FailCounter < 3)
+        {
+            if (RemainingWeek <= 3)
+            {
+                // LevelToGo retrieve data at the beginning
+                FailCounter += 1;
+                NextLevel.interactable = true;
+                NextLevel.GetComponentInChildren<TextMeshProUGUI>().text = "Go back and grab more";
+            }
+        }
         else
         {
+            // normally SceneTransitionManager.TargetScene is not null at this point
+            LevelToGo = 1; // go to transition scene to watch an ending
+            Triggering.InputCutsceneIndex(1);
+            End = true;
             NextLevel.interactable = true;
-            NextLevel.GetComponentInChildren<TextMeshProUGUI>().text = "Go back and grab more";
+            NextLevel.GetComponentInChildren<TextMeshProUGUI>().text = "You failed your destiny";
         }
     }
 
@@ -232,7 +252,7 @@ public class Scoring : MonoBehaviour
         */
 
         //SceneTransitionManager.FadeScreenAnimation();
-        FadeScreenAnimation();
+        StartCoroutine(FadeScreenAnimation());
         SceneManager.LoadScene(LevelToGo);
         LevelToGo = 0;
     }
