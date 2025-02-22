@@ -10,6 +10,7 @@ public class HoomanBehavior : MonoBehaviour
 
     public Transform head;
     public Transform player; // target(player)
+    public Camera playerCam;
     public float maxSpeed = 3f;
     public float acceleration = 1f;
     public float rotateSpeed = 2f;
@@ -47,13 +48,12 @@ public class HoomanBehavior : MonoBehaviour
             {
                 player = playerObj.transform;
             }
-        }
 
-        if (HPslider != null)
-            HPslider.transform.rotation = new Quaternion(HPslider.transform.rotation.x,
-                                                         HPslider.transform.rotation.y * -1,
-                                                         HPslider.transform.rotation.z,
-                                                         HPslider.transform.rotation.w);
+            if (playerCam == null)
+            {
+                playerCam = Camera.main;
+            }
+        }
     }
 
     void FixedUpdate()
@@ -111,7 +111,9 @@ public class HoomanBehavior : MonoBehaviour
                     Time.deltaTime * rotateSpeed);
         }
         head.rotation = Quaternion.Slerp(head.rotation, targetRotation, Time.deltaTime * rotateSpeed);
-#endregion
+        #endregion
+
+        HPslider.transform.rotation = Quaternion.LookRotation(transform.position - playerCam.transform.position);
 
         // Movement logic
         moveDirection = (player.position - transform.position).normalized;
