@@ -203,33 +203,42 @@ public class Scoring : MonoBehaviour
         CumulativeScore.text = "" + TotalScore;
         Remaining.text = "" + RemainingWeek;
 
-        if (RemainingWeek >= 3)
+        if (FatScore < 500)
         {
-            LevelToGo++;
-            FailCounter = 0;
-            NextLevel.interactable = true;
-            NextLevel.GetComponentInChildren<TextMeshProUGUI>().text = "Next Level";
-        }
-
-        if (FailCounter < 3)
-        {
-            if (RemainingWeek <= 3)
+            if (RemainingWeek >= 3)
             {
-                // LevelToGo retrieve data at the beginning
-                FailCounter += 1;
-                NextLevel.interactable = true;
-                NextLevel.GetComponentInChildren<TextMeshProUGUI>().text = "Go back and grab more";
+                LevelToGo++;
+                FailCounter = 0;
+                NextLevel.GetComponentInChildren<TextMeshProUGUI>().text = "Next Level";
+            }
+
+            if (FailCounter < 3)
+            {
+                if (RemainingWeek <= 3)
+                {
+                    // LevelToGo retrieve data at the beginning
+                    FailCounter += 1;
+                    NextLevel.GetComponentInChildren<TextMeshProUGUI>().text = "Go back and grab more";
+                }
+            }
+            else
+            {
+                // normally SceneTransitionManager.TargetScene is not null at this point
+                LevelToGo = 1; // go to transition scene to watch an ending
+                Triggering.InputCutsceneIndex(1);
+                End = true;
+                NextLevel.GetComponentInChildren<TextMeshProUGUI>().text = "You failed your destiny";
             }
         }
         else
         {
-            // normally SceneTransitionManager.TargetScene is not null at this point
             LevelToGo = 1; // go to transition scene to watch an ending
             Triggering.InputCutsceneIndex(1);
-            End = true;
-            NextLevel.interactable = true;
-            NextLevel.GetComponentInChildren<TextMeshProUGUI>().text = "You failed your destiny";
+            // End = true;
+            NextLevel.GetComponentInChildren<TextMeshProUGUI>().text = "You are fat, meet your fate";
         }
+
+        NextLevel.interactable = true;
     }
 
     private void NextLevel_onClick()

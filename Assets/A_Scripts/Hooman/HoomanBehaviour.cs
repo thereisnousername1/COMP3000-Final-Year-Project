@@ -120,6 +120,12 @@ public class HoomanBehavior : MonoBehaviour
 
         currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, acceleration * Time.deltaTime);
         rb.linearVelocity = moveDirection * currentSpeed;
+
+        // height limitation
+        if (this.transform.position.y < -100)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 #region Get Hurt logic

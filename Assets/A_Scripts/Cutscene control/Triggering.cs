@@ -46,6 +46,7 @@ public class Triggering : MonoBehaviour
     [SerializeField]
     private FadeScreen fadeScreen;
 
+    // initialization and receiving data take place
     void Start()
     {
         foreach (GameObject scene in scenes)
@@ -63,18 +64,26 @@ public class Triggering : MonoBehaviour
         // Debug.Log(WooshPillar.GetComponentInChildren<XRSimpleInteractable>().selectEntered.ToString());
 
         // Scoring.End reset in ExitChecking and goBack function
-        if (Scoring.End != true)
+        if (Index == 0)
         {
-            // when player start a new game in startpage scene, at this point the SceneTransitionManager.TargetScene should be != null
-            NextScenetoGo = SceneTransitionManager.TargetScene;
-            WooshPillar.GetComponentInChildren<Text>().text = "Go to " + NextScenetoGo;
+            if (Scoring.End != true)
+            {
+                // when player start a new game in startpage scene, at this point the SceneTransitionManager.TargetScene should be != null
+                NextScenetoGo = SceneTransitionManager.TargetScene;
+                WooshPillar.GetComponentInChildren<Text>().text = "Begin at " + NextScenetoGo;
+            }
+            else
+            {
+                NextScenetoGo = null;
+                WooshPillar.GetComponentInChildren<Text>().text = "Geez, you can't play this game";
+            }
         }
         else
         {
-            NextScenetoGo = null;
-            WooshPillar.GetComponentInChildren<Text>().text = "Geez, you can't play this game";
+            NextScenetoGo = SceneTransitionManager.TargetScene;
+            WooshPillar.GetComponentInChildren<Text>().text = "Retry at " + NextScenetoGo;
         }
-            
+
         WooshPillar.GetComponentInChildren<XRSimpleInteractable>().selectEntered.AddListener(WooshPillar_Button_Selected);
     }
 
@@ -113,17 +122,23 @@ public class Triggering : MonoBehaviour
 
 #region Scene Selector and Woosh Pillar logic
 
+    // First off startpage will sent a target scene to the triggering script
+    // and then NextScenetoGo will store a value
+    // the scene selector will also send the name to this function
+    // so this is the first function that actually happened in the transition scene(so far at this point 22/2/2025)
+    //
     // name in here equals to the scene name
     public void InputDesiredScene(string name)
     {
         NextScenetoGo = name;
-        WooshPillar.GetComponentInChildren<Text>().text = "Go to " + NextScenetoGo;
+        WooshPillar.GetComponentInChildren<Text>().text = "Begin at " + NextScenetoGo;
     }
 
     private void WooshPillar_Button_Selected(SelectEnterEventArgs arg0)
     {
         if (NextScenetoGo != null)
         {
+            InputCutsceneIndex(0);
             StartCoroutine(FadeScreenAnimation());
             SceneManager.LoadScene(NextScenetoGo);
             NextScenetoGo = null;
