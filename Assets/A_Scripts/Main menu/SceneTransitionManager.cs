@@ -74,7 +74,7 @@ public class SceneTransitionManager : MonoBehaviour
 #region Multiple scene
     public void GoToScene(string scene)
     {
-        Scoring.End = false;
+        Scoring.End = false;    // It is safe cuz checkout scene don't call this function
 
         //StartCoroutine(GoToSceneRoutine(scene));
         StartCoroutine(FadeScreenAnimation());
@@ -110,6 +110,7 @@ public class SceneTransitionManager : MonoBehaviour
         TargetScene = null;
         Triggering.InputCutsceneIndex(0);
         Scoring.End = false;
+        Scoring.FailCounter = 0;
 
         //StartCoroutine(GoBackRoutine());
         StartCoroutine(FadeScreenAnimation());

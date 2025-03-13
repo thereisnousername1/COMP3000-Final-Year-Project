@@ -233,8 +233,8 @@ public class Scoring : MonoBehaviour
         else
         {
             LevelToGo = 1; // go to transition scene to watch an ending
-            Triggering.InputCutsceneIndex(1);
-            // End = true;
+            Triggering.InputCutsceneIndex(2);   // refer to cutscene index 2: obesity
+            End = true;
             NextLevel.GetComponentInChildren<TextMeshProUGUI>().text = "You are fat, meet your fate";
         }
 
@@ -262,6 +262,10 @@ public class Scoring : MonoBehaviour
 
         //SceneTransitionManager.FadeScreenAnimation();
         StartCoroutine(FadeScreenAnimation());
+
+        if (NextLevel.GetComponentInChildren<TextMeshProUGUI>().text == "Next Level")
+            FailCounter = 0;    // restore
+
         SceneManager.LoadScene(LevelToGo);
         LevelToGo = 0;
     }

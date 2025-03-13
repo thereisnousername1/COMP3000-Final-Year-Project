@@ -113,7 +113,8 @@ public class HoomanBehavior : MonoBehaviour
         head.rotation = Quaternion.Slerp(head.rotation, targetRotation, Time.deltaTime * rotateSpeed);
         #endregion
 
-        HPslider.transform.rotation = Quaternion.LookRotation(transform.position - playerCam.transform.position);
+        if (HPslider)
+            HPslider.transform.rotation = Quaternion.LookRotation(transform.position - playerCam.transform.position);
 
         // Movement logic
         moveDirection = (player.position - transform.position).normalized;

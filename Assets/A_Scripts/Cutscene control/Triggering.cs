@@ -58,31 +58,57 @@ public class Triggering : MonoBehaviour
 
         // when the player just start a new game in the startpage or comes from other level(with TargetScene)
         // by default play the timeline (defined in the EventSystem)
-        if (SceneTransitionManager.TargetScene != null)
-            //...
-            CurrentTimeline.Play();
+        
         // Debug.Log(WooshPillar.GetComponentInChildren<XRSimpleInteractable>().selectEntered.ToString());
 
         // Scoring.End reset in ExitChecking and goBack function
-        if (Index == 0)
+        if (Scoring.End != true)    // reach an end
         {
-            if (Scoring.End != true)
+            if (SceneTransitionManager.TargetScene == null) // pressed cutscene button at startpage
             {
+                NextScenetoGo = "Level 1";
+                WooshPillar.GetComponentInChildren<Text>().text = "Begin at " + NextScenetoGo;
+            }
+
+            // when player start a new game in startpage scene, at this point the SceneTransitionManager.TargetScene should be != null
+            if (SceneTransitionManager.TargetScene == "Level 1")
+            {
+                // pressed start button at startpage
+                CurrentTimeline.Play();
+
+                NextScenetoGo = SceneTransitionManager.TargetScene;
+                WooshPillar.GetComponentInChildren<Text>().text = "Begin at " + NextScenetoGo;
+            }
+
+            /*
+            if (Index == 0)
+            {
+                // pressed start button at startpage
+                CurrentTimeline.Play();
+
                 // when player start a new game in startpage scene, at this point the SceneTransitionManager.TargetScene should be != null
                 NextScenetoGo = SceneTransitionManager.TargetScene;
                 WooshPillar.GetComponentInChildren<Text>().text = "Begin at " + NextScenetoGo;
             }
             else
             {
-                NextScenetoGo = null;
-                WooshPillar.GetComponentInChildren<Text>().text = "Geez, you can't play this game";
+                NextScenetoGo = SceneTransitionManager.TargetScene;
+                WooshPillar.GetComponentInChildren<Text>().text = "Retry at " + NextScenetoGo;
             }
+            */
+
+            // if SceneTransitionManager.TargetScene == ... in the future
+            // InputCutsceneIndex(<desired transition cutscene between 2 levels(if any)>)
         }
         else
         {
-            NextScenetoGo = SceneTransitionManager.TargetScene;
-            WooshPillar.GetComponentInChildren<Text>().text = "Retry at " + NextScenetoGo;
+            CurrentTimeline.Play(); // play ending cutscene
+
+            NextScenetoGo = null;
+            WooshPillar.GetComponentInChildren<Text>().text = "Geez, you can't play this game";
         }
+
+        
 
         WooshPillar.GetComponentInChildren<XRSimpleInteractable>().selectEntered.AddListener(WooshPillar_Button_Selected);
     }
