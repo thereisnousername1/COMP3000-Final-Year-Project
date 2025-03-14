@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class HoomanBehavior : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class HoomanBehavior : MonoBehaviour
     public float maxSpeed = 3f;
     public float acceleration = 1f;
     public float rotateSpeed = 2f;
+
+    //private NavMeshAgent agent;
 
     Vector3 moveDirection;
 
@@ -40,6 +43,10 @@ public class HoomanBehavior : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        //agent = GetComponent<NavMeshAgent>();
+
+        //agent.updateRotation = false;
+        //agent.updatePosition = false;
         if (player == null)
         {
             // Find player automatically by FindWithTag
@@ -123,10 +130,12 @@ public class HoomanBehavior : MonoBehaviour
         rb.linearVelocity = moveDirection * currentSpeed;
 
         // height limitation
-        if (this.transform.position.y < -100)
+        if (this.transform.position.y < -10)
         {
             Destroy(this.gameObject);
         }
+
+        if (this.transform.position.y > 6) FallToGround();
     }
 
 #region Get Hurt logic
@@ -135,6 +144,8 @@ public class HoomanBehavior : MonoBehaviour
         if (isKnockedBack) return; // ignore original behaviour if it is already hitted
 
         isKnockedBack = true;
+
+        hitCount--;
 
         rb.linearVelocity = hitDirection.normalized * hitForce;
 
@@ -189,7 +200,17 @@ public class HoomanBehavior : MonoBehaviour
         // return to normal
         isKnockedBack = false;
         rb.linearVelocity = Vector3.zero;
-        hitCount--;
     }
+    #endregion
+
+#region Fall to the ground
+
+    private void FallToGround()
+    {
+        if (isKnockedBack) return; // ignore original behaviour if it is already hitted
+
+        isKnockedBack = true;
+    }
+
 #endregion
 }

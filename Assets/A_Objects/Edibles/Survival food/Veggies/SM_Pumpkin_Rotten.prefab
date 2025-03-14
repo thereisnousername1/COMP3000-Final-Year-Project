@@ -16,13 +16,14 @@ GameObject:
   - component: {fileID: 3853576200972661132}
   - component: {fileID: -1361948286683642946}
   - component: {fileID: -9203657983242708563}
+  - component: {fileID: 6410694213108632}
   m_Layer: 0
   m_Name: SM_Pumpkin_Rotten
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7836016371754181515
 Transform:
   m_ObjectHideFlags: 0
@@ -303,3 +304,21 @@ MonoBehaviour:
   foodItems:
   - {fileID: 11400000, guid: 45e81f8c34bb859418a30c8be7bcdc73, type: 2}
   - {fileID: 11400000, guid: e7b09cf0bf2f45e41b61fb84ece56744, type: 2}
+--- !u!114 &6410694213108632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4415223627417644924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72343d44dcf44e44da7ccd5046b7c5cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitForce: 10
+  explosionEffectPrefab: {fileID: 0}
+  explosionParticleOffset: {x: 0, y: 1, z: 0}
+  explosionDelay: 6
+  explosionForce: 1000
+  explosionRadius: 20
