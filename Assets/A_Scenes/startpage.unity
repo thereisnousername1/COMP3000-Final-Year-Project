@@ -407,6 +407,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &205986437 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 87842182785749373, guid: 8eb3c8a681b6f0444894a1ce70015682, type: 3}
+  m_PrefabInstance: {fileID: 362193637}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &280752830
 GameObject:
   m_ObjectHideFlags: 0
@@ -2293,6 +2298,67 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeScreen: {fileID: 1790088314}
+--- !u!1001 &47625951262007505
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 73432536871162665, guid: 98c980a34b1648e4781e6e279771c257, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 205986437}
+    - target: {fileID: 3516459327989433133, guid: 98c980a34b1648e4781e6e279771c257, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.746
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516459327989433133, guid: 98c980a34b1648e4781e6e279771c257, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.539
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516459327989433133, guid: 98c980a34b1648e4781e6e279771c257, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.328
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516459327989433133, guid: 98c980a34b1648e4781e6e279771c257, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516459327989433133, guid: 98c980a34b1648e4781e6e279771c257, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516459327989433133, guid: 98c980a34b1648e4781e6e279771c257, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516459327989433133, guid: 98c980a34b1648e4781e6e279771c257, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516459327989433133, guid: 98c980a34b1648e4781e6e279771c257, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516459327989433133, guid: 98c980a34b1648e4781e6e279771c257, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516459327989433133, guid: 98c980a34b1648e4781e6e279771c257, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289442852126792087, guid: 98c980a34b1648e4781e6e279771c257, type: 3}
+      propertyPath: m_Name
+      value: Fly swatter
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 98c980a34b1648e4781e6e279771c257, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2307,3 +2373,4 @@ SceneRoots:
   - {fileID: 660279606}
   - {fileID: 1969798299}
   - {fileID: 362193637}
+  - {fileID: 47625951262007505}
