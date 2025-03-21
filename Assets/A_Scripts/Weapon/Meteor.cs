@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Meteor : Weapon
 {
-    
     [SerializeField] private GameObject explosionEffectPrefab;
+    GameObject explosionEffect;
     [SerializeField] private Vector3 explosionParticleOffset = new Vector3(0, 1, 0);
 
     [SerializeField] private float explosionForce = 700f;
@@ -31,7 +31,9 @@ public class Meteor : Weapon
     {
         if (explosionEffectPrefab)
         {
-            GameObject explosionEffect = Instantiate(explosionEffectPrefab, transform.position + explosionParticleOffset, Quaternion.identity);
+            explosionEffect = Instantiate(explosionEffectPrefab,
+                                          new Vector3(transform.position.x, transform.position.y - 5f, transform.position.z) + explosionParticleOffset,
+                                          Quaternion.identity);
 
             Destroy(explosionEffect, 4f);
         }

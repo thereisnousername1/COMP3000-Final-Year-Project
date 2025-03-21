@@ -4,6 +4,7 @@ using UnityEngine;
 public class Grenade : Weapon
 {
     [SerializeField] private GameObject explosionEffectPrefab;
+    GameObject explosionEffect;
     [SerializeField] private Vector3 explosionParticleOffset = new Vector3(0, 1, 0);
 
     [SerializeField] private float explosionDelay = 3f;
@@ -39,7 +40,7 @@ public class Grenade : Weapon
     {
         if (explosionEffectPrefab)
         {
-            GameObject explosionEffect = Instantiate(explosionEffectPrefab, transform.position + explosionParticleOffset, Quaternion.identity);
+            explosionEffect = Instantiate(explosionEffectPrefab, transform.position + explosionParticleOffset, Quaternion.identity);
 
             Destroy(explosionEffect, 4f);
         }
