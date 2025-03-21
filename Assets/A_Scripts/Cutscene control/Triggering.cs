@@ -108,8 +108,6 @@ public class Triggering : MonoBehaviour
             WooshPillar.GetComponentInChildren<Text>().text = "Geez, you can't play this game";
         }
 
-        
-
         WooshPillar.GetComponentInChildren<XRSimpleInteractable>().selectEntered.AddListener(WooshPillar_Button_Selected);
     }
 

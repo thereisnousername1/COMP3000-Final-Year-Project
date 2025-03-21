@@ -11,6 +11,8 @@ public class Weapon : MonoBehaviour
     [SerializeField] private AudioClip hitSound;    // for grenade this will be the same as impact sound
     private AudioSource audioSource;
 
+    HoomanBehavior hooman;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -31,7 +33,7 @@ public class Weapon : MonoBehaviour
         if (collision.gameObject.CompareTag("Hooman"))
         {
             // Grab the object's HoomanBehavior script
-            HoomanBehavior hooman = collision.gameObject.GetComponent<HoomanBehavior>();
+            hooman = collision.gameObject.GetComponent<HoomanBehavior>();
             if (hooman != null)
             {
                 // Hit force calculation

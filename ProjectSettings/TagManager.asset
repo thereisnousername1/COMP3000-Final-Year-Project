@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Hooman
   - Floor
+  - PromotionalCam
   layers:
   - Default
   - TransparentFX

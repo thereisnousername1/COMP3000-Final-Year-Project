@@ -1,3 +1,4 @@
+using Oculus.Interaction;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
@@ -11,11 +12,6 @@ public class Meteor : Weapon
     [SerializeField] private float explosionRadius = 5f;
 
     private bool hasExploded = false;
-
-    private void Start()
-    {
-        // rb = GetComponent<Rigidbody>();
-    }
 
     public void OnCollisionEnter(Collision collision)
     {
@@ -43,7 +39,7 @@ public class Meteor : Weapon
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach (Collider nearbyObject in colliders)
         {
-            if (nearbyObject)
+            if (nearbyObject.gameObject.GetComponent<Weapon>() == null || nearbyObject.gameObject.GetComponent<Meteor>() == true)
             {
                 Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
                 if (rb != null)
