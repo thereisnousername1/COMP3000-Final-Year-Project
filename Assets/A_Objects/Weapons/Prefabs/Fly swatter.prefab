@@ -167,7 +167,10 @@ PrefabInstance:
       addedObject: {fileID: 8273542141136412190}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8390408aacfd42640b5d03dd92573b9a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3004036292742313671}
+      addedObject: {fileID: 7233048467448487989}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8390408aacfd42640b5d03dd92573b9a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2860999125128468004}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8390408aacfd42640b5d03dd92573b9a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7445566352280407100}
@@ -244,8 +247,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3004036292742313671
-MeshCollider:
+--- !u!65 &7233048467448487989
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -262,10 +265,32 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7450741763379908841, guid: 1f60e73bb0438104c8c938a3212aa317, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.040000003, y: 0.04, z: 0.005}
+  m_Center: {x: 0, y: 0, z: -0.0025}
+--- !u!136 &2860999125128468004
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4289442852126792087}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.003
+  m_Height: 0.08
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.06, z: -0.0025000013}
 --- !u!54 &7445566352280407100
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -365,7 +390,7 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 2174621047256110014}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1

@@ -16,6 +16,8 @@ public class HoomanBehavior : MonoBehaviour
     public float acceleration = 1f;
     public float rotateSpeed = 2f;
 
+    public float maxHeightLimit = 10f;
+
     //private NavMeshAgent agent;
 
     Vector3 moveDirection;
@@ -135,7 +137,7 @@ public class HoomanBehavior : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if (this.transform.position.y > 6) FallToGround();
+        if (this.transform.position.y > maxHeightLimit) FallToGround();
     }
 
 #region Get Hurt logic
