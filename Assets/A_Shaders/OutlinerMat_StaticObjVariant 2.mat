@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OutlinerMat_MainStaticObj
+  m_Name: OutlinerMat_StaticObjVariant 2
   m_Shader: {fileID: -6465566751694194690, guid: 8dd620b24e1536645b6b78518da5a6da, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -34,7 +34,6 @@ Material:
     RenderType: Opaque
   disabledShaderPasses:
   - MOTIONVECTORS
-  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -55,10 +54,8 @@ Material:
     m_Floats:
     - _AlphaClip: 0
     - _AlphaToMask: 0
-    - _BUILTIN_QueueControl: -1
-    - _BUILTIN_QueueOffset: 0
     - _Blend: 0
-    - _CastShadows: 0
+    - _CastShadows: 1
     - _Cull: 1
     - _DstBlend: 0
     - _QueueControl: 0
@@ -69,7 +66,7 @@ Material:
     - _Transparency: 1
     - _ZTest: 4
     - _ZWrite: 1
-    - _ZWriteControl: 1
+    - _ZWriteControl: 0
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _Vector3: {r: 0, g: 0, b: 0, a: 0}

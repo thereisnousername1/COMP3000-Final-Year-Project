@@ -20,19 +20,22 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OutlinerMat_Hands_Cutscene
-  m_Shader: {fileID: -6465566751694194690, guid: 8dd620b24e1536645b6b78518da5a6da, type: 3}
+  m_Name: OutlinerMat_Hooman_Cutscene
+  m_Shader: {fileID: -6465566751694194690, guid: bd38142f71c074443855537316a19fcd, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses:
   - MOTIONVECTORS
+  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -56,17 +59,18 @@ Material:
     - _BUILTIN_QueueControl: -1
     - _BUILTIN_QueueOffset: 0
     - _Blend: 0
-    - _CastShadows: 1
+    - _CastShadows: 0
     - _Cull: 1
     - _DstBlend: 10
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Scale: 1.07
+    - _Scale: 0
     - _SrcBlend: 5
     - _Surface: 1
+    - _Transparency: 1
     - _ZTest: 4
-    - _ZWrite: 0
-    - _ZWriteControl: 0
+    - _ZWrite: 1
+    - _ZWriteControl: 1
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _Vector3: {r: 0, g: 0, b: 0, a: 0}
